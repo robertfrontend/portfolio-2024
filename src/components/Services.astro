@@ -1,0 +1,55 @@
+---
+const experience = [
+  {
+    title: "Front end Developer",
+    business: "Arionkoder",
+    date: "Jun 2022 - Current / 2 years",
+    logo: "./arionkoder.png",
+    website: "arionkoder.com",
+  },
+  {
+    title: "Front end Developer",
+    business: "AlterEstate",
+    date: "Jun 2021 - Nov 2021 / 6 months",
+    logo: "./alterestate_logo.jpeg",
+    website: "arionkoder.com",
+  },
+  {
+    title: "Front end Developer",
+    business: "Arionkoder",
+    date: "Jun 2022 - Current / 2 years",
+    logo: "./arionkoder.png",
+    website: "arionkoder.com",
+  },
+  {
+    title: "Front end Developer",
+    business: "AlterEstate",
+    date: "Jun 2021 - Nov 2021 / 6 months",
+    logo: "./alterestate_logo.jpeg",
+    website: "arionkoder.com",
+  },
+];
+---
+
+<div class="my-10 w-full">
+  <div class="content-services flex flex-wrap justify-center">
+    {
+      experience.map((item) => (
+        <div class="w-full md:w-2/5 my-4 mx-4 p-4 flex flex-col justify-start items-center border-solid border-2 border-violet rounded-md cursor-pointer">
+          <h4 class="text-2xl">{item.title} </h4>
+          <div class="empresa flex justify-center items-center py-2">
+            <img src={item.logo} class="w-10" alt="" />
+            <h4 class="text-xl mx-2"> {item.business} </h4>
+          </div>
+          <p class=""> {item.date} </p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .content-services {
+    width: 100%;
+  }
+</style>
