@@ -115,19 +115,20 @@
   /* Ajustes para dispositivos móviles */
   @media (max-width: 768px) {
     .animate-infinite-scroll {
-      animation-duration: 40s; /* Reduce la velocidad de la animación */
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+      animation: none; /* Desactiva la animación en dispositivos móviles */
+    }
+
+    .animate-infinite-scroll > div {
+      min-width: 100%; /* Ajusta el tamaño de las imágenes */
+      height: auto;
     }
 
     .animate-infinite-scroll > div > div {
-      min-width: 200px; /* Reduce el tamaño de las imágenes */
-      height: 150px;
+      min-width: 100%;
+      height: auto;
     }
   }
 </style>
-
-<script>
-  // Duplicar el contenido del carrusel
-  const carousel = document.querySelector(".animate-infinite-scroll");
-  const content = carousel.innerHTML;
-  carousel.innerHTML += content;
-</script>
