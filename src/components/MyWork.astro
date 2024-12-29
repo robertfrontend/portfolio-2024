@@ -1,0 +1,121 @@
+<section class="py-12 bg-[#5E22EB] overflow-hidden">
+  <h2 class="text-3xl font-bold text-white text-center mb-8">
+    My Latest Works
+  </h2>
+  <div class="relative w-full overflow-hidden">
+    <div class="flex gap-6 animate-infinite-scroll">
+      <!-- Contenido duplicado para bucle infinito -->
+      <div class="flex gap-6">
+        <!-- Imagen 1 -->
+        <div
+          class="min-w-[300px] h-[200px] bg-gray-200 rounded-lg overflow-hidden"
+        >
+          <img
+            src="/work/1.png"
+            alt="Project 1"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Imagen 2 -->
+        <div
+          class="min-w-[300px] h-[200px] bg-gray-200 rounded-lg overflow-hidden"
+        >
+          <img
+            src="/work/2.png"
+            alt="Project 2"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Imagen 3 -->
+        <div
+          class="min-w-[300px] h-[200px] bg-gray-200 rounded-lg overflow-hidden"
+        >
+          <img
+            src="/work/3.png"
+            alt="Project 3"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Imagen 4 -->
+        <div
+          class="min-w-[300px] h-[200px] bg-gray-200 rounded-lg overflow-hidden"
+        >
+          <img
+            src="/work/4.png"
+            alt="Project 4"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Imagen 5 -->
+        <div
+          class="min-w-[300px] h-[200px] bg-gray-200 rounded-lg overflow-hidden"
+        >
+          <img
+            src="/work/5.png"
+            alt="Project 5"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Imagen 6 -->
+        <div
+          class="min-w-[300px] h-[200px] bg-gray-200 rounded-lg overflow-hidden"
+        >
+          <img
+            src="/work/6.png"
+            alt="Project 6"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Imagen 7 -->
+        <div
+          class="min-w-[300px] h-[200px] bg-gray-200 rounded-lg overflow-hidden"
+        >
+          <img
+            src="/work/7.png"
+            alt="Project 7"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-6">
+      <a
+        href="#contact"
+        class="mt-4 inline-block bg-gray-800 text-white px-8 py-3 rounded-full text-xl"
+      >
+        Let's work together →
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-infinite-scroll {
+    display: flex;
+    width: max-content;
+    animation: infinite-scroll 20s linear infinite;
+  }
+
+  /* Ajuste para evitar cortes entre iteraciones */
+  .animate-infinite-scroll > div {
+    flex-shrink: 0;
+    display: flex;
+    gap: 1.5rem; /* Asegura el mismo espacio entre imágenes */
+  }
+</style>
+
+<script>
+  // Duplicar el contenido del carrusel
+  const carousel = document.querySelector(".animate-infinite-scroll");
+  const content = carousel.innerHTML;
+  carousel.innerHTML += content;
+</script>

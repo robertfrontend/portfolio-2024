@@ -1,85 +1,44 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Social from "../components/Social.astro";
-
-import Projects from "../components/Projects.astro";
+import Services from "../components/Services.astro";
+import AboutMe from "../components/AboutMe.astro";
+import MyWorks from "../components/MyWork.astro";
 ---
 
-<Layout title="Robert | Frontend Developer">
-  <main class="bg-[#05011b] min-h-[100vh] mx-2 my-2 rounded-[12px]">
-    <header class="grid grid-cols-2 justify-center items-center py-4 px-8">
-      <div class=""><h3 class="text-lg md:text-2xl">👨‍💻Robertfrontend</h3></div>
-      <div class="text-right">
-        <button class="text-lg md:text-2xl">Let's Work</button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robert - Frontend Developer</title>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Header Section -->
+    <section class="text-center py-10">
+      <div class="container mx-auto text-center px-4 md:px-0">
+        <p class="text-sm text-green-500 font-semibold">
+          ✅ AVAILABLE FOR WORK
+        </p>
+        <h1 class="text-3xl md:text-6xl font-bold mt-2">
+          Hello 👋, I'm Robert Romero
+        </h1>
+        <h1 class="text-3xl md:text-6xl font-bold text-[#5E22EB] mt-2">
+          Frontend Developer
+        </h1>
+        <h4 class="text-xl md:text-3xl text-gray-500 mt-2">
+          Creating digital experiences that make an impact.
+        </h4>
+        <a
+          href="#contact"
+          class="mt-4 inline-block bg-gray-800 text-white px-8 py-3 rounded-full text-xl"
+        >
+          Contact me →
+        </a>
       </div>
-    </header>
+    </section>
 
-    <div class="container mx-auto text-center px-2 pt-4 md:px-10">
-      <div class="w-auto xl:w-4/6 mx-auto">
-        <section class="py-10 md:w-4/6 mx-auto">
-          <h1 class="text-3xl md:text-5xl">Hello 👋, I'm Robert</h1>
-          <h1 class="text-3xl md:text-5xl pt-2 text-[#5D22EB]">
-            Frontend Developer
-          </h1>
-          <p class="text-lg md:text-xl pt-4 text-zinc-300">
-            Creating amazing web applications
-          </p>
-        </section>
+    <Services />
 
-        <section class="md:w-4/6 mx-auto pb-10">
-          <h1 class="text-3xl md:text-5xl">About Me</h1>
-          <p class="text-lg md:text-xl pt-4 text-zinc-300">
-            I have +4 experience years working as Frontend Developer. 4 years
-            doing amazing things for amazing companies.
-          </p>
-          <p class="text-lg md:text-xl pt-4 text-zinc-300">
-            Working with the following technologies 👇
-            <br /> React, TypeScript, Vue, Astro, Firebase, Framer Motion, and
-            much more....
-          </p>
-        </section>
+    <MyWorks />
 
-        <section class="pb-10">
-          <h1 class="text-3xl md:text-5xl">Personal Projects</h1>
-          <Projects />
-        </section>
-
-        <section class="pb-10">
-          <h1 class="text-3xl md:text-5xl pb-4">Let's work together</h1>
-          <Social />
-        </section>
-
-        <!-- 
-
-        <section class="py-5">
-          <h1 class="text-3xl md:text-5xl">Experience</h1>
-          <Services />
-        </section>
-
-        <section class="py-5">
-          <h1 class="text-3xl md:text-5xl">Projects</h1>
-        </section>
-
-        <section class="py-5">
-          <h1 class="text-3xl md:text-5xl">Contact</h1>
-          <p class="text-xl pt-4 text-zinc-300">
-            ¡Hola! Soy Robert, un desarrollador frontend apasionado por
-            transformar ideas audaces en experiencias digitales memorables.
-          </p>
-        </section> -->
-      </div>
-    </div>
-  </main>
-
-  <style>
-    /* main {
-      width: 98%;
-      margin: 1em auto;
-      min-height: 100vh;
-      background-color: #05011b;
-      border-radius: 1em;
-      position: relative;
-      padding: 1em 0;
-    } */
-  </style>
-</Layout>
+    <AboutMe />
+  </body>
+</html>

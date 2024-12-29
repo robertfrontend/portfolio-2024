@@ -1,55 +1,58 @@
----
-const experience = [
-  {
-    title: "Front end Developer",
-    business: "Arionkoder",
-    date: "Jun 2022 - Current / 2 years",
-    logo: "./arionkoder.png",
-    website: "arionkoder.com",
-  },
-  {
-    title: "Front end Developer",
-    business: "AlterEstate",
-    date: "Jun 2021 - Nov 2021 / 6 months",
-    logo: "./alterestate_logo.jpeg",
-    website: "arionkoder.com",
-  },
-  {
-    title: "Front end Developer",
-    business: "Arionkoder",
-    date: "Jun 2022 - Current / 2 years",
-    logo: "./arionkoder.png",
-    website: "arionkoder.com",
-  },
-  {
-    title: "Front end Developer",
-    business: "AlterEstate",
-    date: "Jun 2021 - Nov 2021 / 6 months",
-    logo: "./alterestate_logo.jpeg",
-    website: "arionkoder.com",
-  },
-];
----
+<!-- Services Section -->
+<section class="text-center">
+  <div class="py-10 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">💼 My Services</h2>
+    <div class="flex flex-wrap justify-center gap-4">
+      <!-- Service Card 1 -->
+      <a
+        href="#"
+        class="group inline-flex items-center justify-center border-2 border-[#5E22EB] text-gray-800 px-6 py-3 rounded-full text-lg font-medium transition-transform transform hover:scale-105 hover:bg-[#5E22EB] hover:text-white shadow-md"
+      >
+        → Websites for Business
+      </a>
 
-<div class="my-10 w-full">
-  <div class="content-services flex flex-wrap justify-center">
-    {
-      experience.map((item) => (
-        <div class="w-full md:w-2/5 my-4 mx-4 p-4 flex flex-col justify-start items-center border-solid border-2 border-violet rounded-md cursor-pointer">
-          <h4 class="text-2xl">{item.title} </h4>
-          <div class="empresa flex justify-center items-center py-2">
-            <img src={item.logo} class="w-10" alt="" />
-            <h4 class="text-xl mx-2"> {item.business} </h4>
-          </div>
-          <p class=""> {item.date} </p>
-        </div>
-      ))
-    }
+      <!-- Service Card 2 -->
+      <a
+        href="#"
+        class="group inline-flex items-center justify-center border-2 border-[#5E22EB] text-gray-800 px-6 py-3 rounded-full text-lg font-medium transition-transform transform hover:scale-105 hover:bg-[#5E22EB] hover:text-white shadow-md"
+      >
+        → MVPs Creator
+      </a>
+
+      <!-- Service Card 3 -->
+      <a
+        href="#"
+        class="group inline-flex items-center justify-center border-2 border-[#5E22EB] text-gray-800 px-6 py-3 rounded-full text-lg font-medium transition-transform transform hover:scale-105 hover:bg-[#5E22EB] hover:text-white shadow-md"
+      >
+        → Frontend Services
+      </a>
+    </div>
   </div>
-</div>
 
-<style>
-  .content-services {
-    width: 100%;
-  }
-</style>
+  <div class="py-10 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">
+      🛠️ Skills & Technologies
+    </h2>
+    <div
+      class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-700"
+    >
+      <!-- Frontend -->
+      <div class="p-4 bg-white rounded-lg">
+        <h3 class="text-2xl font-semibold mb-2">💻 Frontend</h3>
+        <p class="text-xl">React.js, Next.js, Vue.js, Tailwind CSS</p>
+      </div>
+
+      <!-- No-code -->
+      <div class="p-4 bg-white rounded-lg">
+        <h3 class="text-2xl font-semibold mb-2">⚡ No-code & Design</h3>
+        <p class="text-xl">Framer, Webflow, Figma</p>
+      </div>
+
+      <!-- Backend -->
+      <div class="p-4 bg-white rounded-lg">
+        <h3 class="text-2xl font-semibold mb-2">🛡️ Backend</h3>
+        <p class="text-xl">Firebase, Supabase, Python</p>
+      </div>
+    </div>
+  </div>
+</section>

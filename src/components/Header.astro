@@ -1,0 +1,49 @@
+---
+const profileImage = "/path-to-your-image.jpg"; // Cambia esto por la ruta de tu imagen
+const userName = "Kawsar Ahmed 👋";
+const title = "Building digital products, brands, and experience.";
+const buttonText = "Latest Shots";
+const buttonLink = "#";
+---
+
+<section class="bg-gray-50 rounded-xl p-8 md:p-16 text-center shadow-lg">
+  <!-- Imagen de perfil -->
+  <div class="relative inline-block">
+    <img
+      src={profileImage}
+      alt="Profile Picture"
+      class="w-24 h-24 rounded-full object-cover mx-auto border-4 border-white shadow-md"
+    />
+    <span
+      class="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-white px-2 py-1 text-sm font-medium shadow-md rounded-full"
+    >
+      {userName}
+    </span>
+  </div>
+
+  <!-- Título principal -->
+  <h1 class="text-3xl md:text-5xl font-bold mt-6 text-gray-900 leading-tight">
+    {title}
+  </h1>
+
+  <!-- Botón de acción -->
+  <a
+    href={buttonLink}
+    class="inline-flex items-center gap-2 mt-6 px-6 py-2 bg-black text-white text-lg font-medium rounded-full hover:bg-gray-800 transition duration-300"
+  >
+    {buttonText}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-5 h-5"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4.5 12h15m0 0l-6-6m6 6l-6 6"></path>
+    </svg>
+  </a>
+</section>
