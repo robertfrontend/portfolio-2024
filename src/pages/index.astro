@@ -2,6 +2,8 @@
 import Services from "../components/Services.astro";
 import AboutMe from "../components/AboutMe.astro";
 import MyWorks from "../components/MyWork.astro";
+
+import Social from "../components/Social.astro";
 ---
 
 <html lang="en">
@@ -30,10 +32,12 @@ import MyWorks from "../components/MyWork.astro";
           href="#contact"
           class="mt-4 inline-block bg-gray-800 text-white px-8 py-3 rounded-full text-xl"
         >
-          Contact me →
+          Let's work together →
         </a>
       </div>
     </section>
+
+    <Social />
 
     <Services />
 
@@ -41,7 +45,9 @@ import MyWorks from "../components/MyWork.astro";
 
     <AboutMe />
 
-    <footer class="bg-gray-800 text-white text-center py-10 mt-8">
+    <Social />
+
+    <footer class="bg-gray-50 text-gray-800 text-center py-10 mt-8">
       <p>&copy; 2025 Robert Frontend. All rights reserved.</p>
     </footer>
   </body>
