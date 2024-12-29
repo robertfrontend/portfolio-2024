@@ -111,6 +111,18 @@
     display: flex;
     gap: 1.5rem; /* Asegura el mismo espacio entre imágenes */
   }
+
+  /* Ajustes para dispositivos móviles */
+  @media (max-width: 768px) {
+    .animate-infinite-scroll {
+      animation-duration: 40s; /* Reduce la velocidad de la animación */
+    }
+
+    .animate-infinite-scroll > div > div {
+      min-width: 200px; /* Reduce el tamaño de las imágenes */
+      height: 150px;
+    }
+  }
 </style>
 
 <script>
