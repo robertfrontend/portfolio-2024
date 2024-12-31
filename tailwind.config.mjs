@@ -8,5 +8,10 @@ export default {
       },
     },
   },
+  daisyui: {
+    // no dark mode
+    themes: ["light"],
+  },
+
   plugins: [require("daisyui")],
 };
