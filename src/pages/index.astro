@@ -15,7 +15,7 @@ import Social from "../components/Social.astro";
   <body class="bg-white text-gray-800 font-sans">
     <!-- Header Section -->
     <section
-      class="text-center md:my-[10em] pt-[4em] pb-[4em] justify-center flex items-center flex-col"
+      class="text-center md:my-[4em] pt-[4em] pb-[4em] justify-center flex items-center flex-col"
     >
       <div class="container mx-auto text-center px-4 md:px-0">
         <!-- <p class="text-sm text-green-500 font-semibold">
@@ -24,29 +24,34 @@ import Social from "../components/Social.astro";
         <h1 class="text-3xl md:text-6xl font-bold mt-2">
           Hello 👋, I'm Robert Romero
         </h1>
-        <h1 class="text-3xl md:text-6xl font-bold text-[#5E22EB] mt-2">
+        <!-- <h1 class="text-3xl md:text-6xl font-bold text-[#5E22EB] mt-2">
           Frontend Developer
-        </h1>
-        <h4 class="text-xl md:text-2xl text-gray-500 mt-2">
+        </h1> -->
+        <!-- <h4 class="text-xl md:text-2xl text-gray-500 mt-2">
           Creating digital experiences that make an impact.
-        </h4>
+        </h4> -->
+        <AboutMe />
+
         <div class="mt-4">
           <a
             href="#contact"
-            class="mt-4 inline-block bg-gray-800 text-white px-8 py-3 rounded-full text-xl shadow-sm"
+            class="mt-4 inline-block bg-gray-800 text-white
+            px-6 py-2 rounded-md text-xl shadow-sm"
             id="contact-button"
           >
             Let's work together →
           </a>
           <a
-            href="#contact"
-            class="mt-4 inline-block bg-white border border-gray-800 text-gray-800 px-8 py-3 rounded-full text-xl shadow-sm"
+            href="/RobertCV.pdf"
+            download="Robert_Romero_CV.pdf"
+            class="mt-4 inline-block bg-white border border-gray-800 text-gray-800
+            px-6 py-2 rounded-md text-xl shadow-sm"
           >
             Download CV →
           </a>
         </div>
       </div>
-      <Services />
+      <!-- <Services /> -->
       <!-- <Social /> -->
     </section>
 
@@ -161,8 +166,8 @@ import Social from "../components/Social.astro";
     </dialog>
 
     <MyWorks />
-    <AboutMe />
 
+    <br />
     <Social />
 
     <footer class="bg-gray-50 text-gray-800 text-center py-10 mt-8">
