@@ -2,14 +2,14 @@
 const projects = [
   {
     name: "HolaGenio",
-    description: " Aplicación para crear menú digitales para restaurantes.",
+    description: " Plataforma de herramientas AI para personas no técnicas.",
     date: "2025",
     img: "./work/holagenio.png",
     link: "https://holagenio.com/",
   },
   {
     name: "Boston Data",
-    description: " Aplicación para crear menú digitales para restaurantes.",
+    description: " Hub de datos sobre la ciudad de Boston.",
     date: "2025",
     img: "",
     link: "https://boston-data.vercel.app/",
@@ -26,7 +26,7 @@ const projects = [
     description: " Aplicación para crear menú digitales para restaurantes.",
     date: "2021",
     img: "./work/menudr.png",
-    link: "",
+    link: "https://menudr.vercel.app/",
   },
 ];
 const customers = [
@@ -113,11 +113,11 @@ const customers = [
       <!-- Project Card -->
       {
         customers.map((item) => (
-          <div class="bg-white shadow-sm rounded-lg overflow-hidden border my-2">
+          <div class="bg-white shadow-sm rounded-lg overflow-hidden my-2">
             <img
               src={item.img}
               alt="Project image"
-              class="rounded-t-lg w-full h-[300px] md:h-[200px] object-cover"
+              class="w-full h-[200px] md:h-[200px] object-fill rounded-md"
             />
           </div>
         ))
