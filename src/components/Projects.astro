@@ -1,0 +1,128 @@
+---
+const projects = [
+  {
+    name: "HolaGenio",
+    description: " Aplicación para crear menú digitales para restaurantes.",
+    date: "2025",
+    img: "./work/holagenio.png",
+    link: "https://holagenio.com/",
+  },
+  {
+    name: "Boston Data",
+    description: " Aplicación para crear menú digitales para restaurantes.",
+    date: "2025",
+    img: "",
+    link: "https://boston-data.vercel.app/",
+  },
+  {
+    name: "DiforVi",
+    description: "Diforvi: Digital Tools to Empower Your Business",
+    date: "2024",
+    img: "./work/diforvi.png",
+    link: "https://www.diforvi.com/",
+  },
+  {
+    name: "Menu DR",
+    description: " Aplicación para crear menú digitales para restaurantes.",
+    date: "2021",
+    img: "./work/menudr.png",
+    link: "",
+  },
+];
+const customers = [
+  {
+    img: "./work/1.png",
+  },
+  {
+    img: "./work/2.png",
+  },
+  {
+    img: "./work/3.png",
+  },
+  {
+    img: "./work/4.png",
+  },
+  {
+    img: "./work/5.png",
+  },
+  {
+    img: "./work/sisters.png",
+  },
+];
+---
+
+<section>
+  <div class="py-2 text-center">
+    <h4 class="text-4xl my-2 mb-10 font-semibold">Personal Projects</h4>
+    <div class="flex flex-col gap-10 md:flex-row flex-wrap w-full">
+      {
+        projects.map((item) => (
+          <div
+            class="w-full flex flex-col  gap-2 border-2 bg-gray-50
+           border-gray-50 rounded-md py-2  px-4 shadow-sm justify-center items-center
+            pb-6 md:py-6 md:flex-row md:items-start"
+          >
+            <div class="w-[150px] mx-auto md:w-[260px]r mt-4">
+              {item.img ? (
+                <img
+                  src={item.img || ""}
+                  class="w-full h-[60px] object-contain rounded-md "
+                  alt=""
+                />
+              ) : (
+                <h4 class="text-2xl font-bold">{item.name}</h4>
+              )}
+            </div>
+            <div
+              class="w-full h-full flex flex-col justify-center md:items-start md:pr-10 mdtext-left md:pl-4
+                text-center"
+            >
+              <h4 class="text-2xl font-bold">{item.name}</h4>
+              <p class="text-lg text-gray-600">{item.description}</p>
+              <p class="text-sm text-gray-600">
+                Año de creación: <b>{item.date}</b>
+              </p>
+              <a
+                href={item.link}
+                target="_blank"
+                class="text-blue-600 text-lg md:pr-10 py-2"
+              >
+                Ver proyecto →
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="my-10">
+      <a
+        href="https://github.com/robertfrontend"
+        target="_blank"
+        class="text-xl underline">Mas Proyectos →</a
+      >
+    </div>
+  </div>
+
+  <!--  -->
+  <hr class="py-4" />
+
+  <div class="py-2 text-center mt-10">
+    <h4 class="text-3xl my-2 mb-10 font-semibold">Customer projects</h4>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Project Card -->
+      {
+        customers.map((item) => (
+          <div class="bg-white shadow-sm rounded-lg overflow-hidden border my-2">
+            <img
+              src={item.img}
+              alt="Project image"
+              class="rounded-t-lg w-full h-[300px] md:h-[200px] object-cover"
+            />
+          </div>
+        ))
+      }
+      <!-- Repeat Project Cards as needed -->
+    </div>
+  </div>
+</section>

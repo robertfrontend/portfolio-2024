@@ -4,6 +4,7 @@ import AboutMe from "../components/AboutMe.astro";
 import MyWorks from "../components/MyWork.astro";
 
 import Social from "../components/Social.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <html lang="en">
@@ -14,29 +15,39 @@ import Social from "../components/Social.astro";
   </head>
   <body class="bg-white text-gray-800 font-sans">
     <!-- Header Section -->
-    <section
-      class="text-center md:my-[4em] pt-[4em] pb-[4em] justify-center flex items-center flex-col"
-    >
-      <div class="container mx-auto text-center px-4 md:px-0">
-        <!-- <p class="text-sm text-green-500 font-semibold">
-          ✅ AVAILABLE FOR WORK
-        </p> -->
-        <h1 class="text-3xl md:text-6xl font-bold mt-2">
-          Hello 👋, I'm Robert Romero
-        </h1>
-        <!-- <h1 class="text-3xl md:text-6xl font-bold text-[#5E22EB] mt-2">
-          Frontend Developer
-        </h1> -->
-        <!-- <h4 class="text-xl md:text-2xl text-gray-500 mt-2">
-          Creating digital experiences that make an impact.
-        </h4> -->
-        <AboutMe />
 
+    <main class="mx-auto w-[90%] md:w-[900px] min-h-[100vh] mb-10">
+      <header
+        class="text-center py-[4em] flex flex-col justify-center items-center"
+      >
+        <img
+          src="./full.jpg"
+          class="w-[200px] h-[200px] object-cover rounded-full"
+          alt=""
+        />
+        <div class="my-2">
+          <h2 class="text-3xl md:text-5xl font-bold">Robert Romero Medina</h2>
+          <p class="text-xl md:text-3xl md:mt-4 font-semibold text-violet">
+            Frontend Developer
+          </p>
+        </div>
+        <div class="mt-2">
+          <h4 class="text-3xl md:text-3xl my-2 font-semibold">About me</h4>
+          <p class="text-xl md:text-2xl font-normal text-gray-600">
+            I'm a Frontend Developer with over 4 years of experience crafting
+            engaging digital experiences using React.js, Next.js, and Tailwind
+            CSS. Passionate about building impactful web solutions that blend
+            functionality and aesthetics.
+          </p>
+        </div>
         <div class="mt-4">
+          <Social />
+        </div>
+        <div class="flex gap-2 my-2">
           <a
             href="#contact"
-            class="mt-4 inline-block bg-gray-800 text-white
-            px-6 py-2 rounded-md text-xl shadow-sm"
+            class="mt-4 inline-block bg-white border border-gray-800 text-gray-800
+            px-4 py-2 rounded-md text-xl shadow-sm"
             id="contact-button"
           >
             Let's work together →
@@ -45,19 +56,18 @@ import Social from "../components/Social.astro";
             href="/RobertCV.pdf"
             download="Robert_Romero_CV.pdf"
             class="mt-4 inline-block bg-white border border-gray-800 text-gray-800
-            px-6 py-2 rounded-md text-xl shadow-sm"
+            px-4 py-2 rounded-md text-xl shadow-sm"
           >
             Download CV →
           </a>
         </div>
-      </div>
-      <!-- <Services /> -->
-      <!-- <Social /> -->
-    </section>
+      </header>
+      <Projects />
+    </main>
 
     <!-- modal -->
     <dialog id="modalContact" class="modal">
-      <div class="modal-box">
+      <div class="modal-box text-center">
         <h3 class="font-bold text-black text-2xl">Where you can talk to me</h3>
 
         <ul class="space-y-4 mt-4">
@@ -66,42 +76,17 @@ import Social from "../components/Social.astro";
             <a
               target="_blank"
               href="mailto:robert02frontend@gmail.com"
-              class="btn btn-lg w-full ml-2 font-bold"
+              class="btn btn-lg w-full ml-2 font-bold bg-transparent border border-gray-50 hover:bg-transparent"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="my-2 mx-2 h-[25px] md:h-[36px] text-gray-600 lucide lucide-mail"
-                ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
-                  d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
-              >
-              Email</a
-            >
+              Email
+            </a>
           </li>
           <li class="flex items-center">
             <a
               target="_blank"
               href="https://wa.me/18573975959"
-              class="btn btn-lg w-full ml-2 font-bold"
+              class="btn btn-lg w-full ml-2 font-bold bg-transparent border border-gray-50 hover:bg-transparent"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="my-2 mx-2 h-[25px] md:h-[36px] text-gray-600 lucide lucide-message-circle"
-                ><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-              >
               WhatsApp</a
             >
           </li>
@@ -109,23 +94,8 @@ import Social from "../components/Social.astro";
             <a
               target="_blank"
               href="https://instagram.com/robertfrontend"
-              class="btn btn-lg w-full ml-2 font-bold"
+              class="btn btn-lg w-full ml-2 font-bold bg-transparent border border-gray-50 hover:bg-transparent"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="my-2 mx-2 h-[25px] md:h-[36px] text-gray-600 lucide lucide-instagram"
-                ><rect width="20" height="20" x="2" y="2" rx="5" ry="5"
-                ></rect><path
-                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                ></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"
-                ></line></svg
-              >
               Instagram</a
             >
           </li>
@@ -133,24 +103,8 @@ import Social from "../components/Social.astro";
             <a
               target="_blank"
               href="https://linkedin.com/in/robertfrontend"
-              class="btn btn-lg w-full ml-2 font-bold"
+              class="btn btn-lg w-full ml-2 font-bold bg-transparent border border-gray-50 hover:bg-transparent"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="my-2 mx-2 h-[25px] md:h-[36px] text-gray-600 lucide lucide-linkedin"
-                ><path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                ></path><rect width="4" height="12" x="2" y="9"></rect><circle
-                  cx="4"
-                  cy="4"
-                  r="2"></circle></svg
-              >
               LinkedIn</a
             >
           </li>
@@ -164,8 +118,6 @@ import Social from "../components/Social.astro";
         </div>
       </div>
     </dialog>
-
-    <MyWorks />
 
     <br />
     <Social />
