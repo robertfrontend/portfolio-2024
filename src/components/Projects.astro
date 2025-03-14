@@ -2,14 +2,14 @@
 const projects = [
   {
     name: "HolaGenio",
-    description: " Plataforma de herramientas AI para personas no técnicas.",
+    description: "AI tools platform for non-technical people.",
     date: "2025",
     img: "./work/holagenio.png",
     link: "https://holagenio.com/",
   },
   {
     name: "Boston Data",
-    description: " Hub de datos sobre la ciudad de Boston.",
+    description: "Data Hub about the city of Boston.",
     date: "2025",
     img: "",
     link: "https://boston-data.vercel.app/",
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     name: "Menu DR",
-    description: " Aplicación para crear menú digitales para restaurantes.",
+    description: "Application to create digital menus for restaurants.",
     date: "2021",
     img: "./work/menudr.png",
     link: "https://menudr.vercel.app/",
@@ -31,22 +31,39 @@ const projects = [
 ];
 const customers = [
   {
-    img: "./work/1.png",
+    img: "./work/holagenio-web.png",
+    link: "https://holagenio.com/",
   },
   {
-    img: "./work/2.png",
+    img: "./work/castle-cleaners.png",
+    type: "Website",
+    link: "https://castlecleanersofficial.com/",
   },
-  {
-    img: "./work/3.png",
-  },
-  {
-    img: "./work/4.png",
-  },
-  {
-    img: "./work/5.png",
-  },
+
   {
     img: "./work/sisters.png",
+    link: "https://sistersdecordeclutter.com/",
+  },
+
+  {
+    img: "./work/yovania.png",
+    link: "https://yovania-castillo.vercel.app/",
+  },
+  {
+    img: "./work/809-bar.png",
+    link: "https://809bar-and-restaurant.com/",
+  },
+  {
+    img: "./work/menudr-web.png",
+    link: "https://menudr.vercel.app/",
+  },
+  {
+    img: "./work/menudr-web-2.png",
+    link: "https://menudr.netlify.app/",
+  },
+  {
+    img: "./work/privitis.png",
+    link: "https://privitys.vercel.app/",
   },
 ];
 ---
@@ -58,8 +75,8 @@ const customers = [
       {
         projects.map((item) => (
           <div
-            class="w-full flex flex-col  gap-2 border-2 bg-gray-50
-           border-gray-50 rounded-md py-2  px-4 shadow-sm justify-center items-center
+            class="w-full flex flex-col gap-2 border-2
+           border-gray-100 rounded-xl py-2  px-4 justify-center items-center
             pb-6 md:py-6 md:flex-row md:items-start"
           >
             <div class="w-[150px] mx-auto md:w-[260px]r mt-4">
@@ -70,15 +87,15 @@ const customers = [
                   alt=""
                 />
               ) : (
-                <h4 class="text-2xl font-bold">{item.name}</h4>
+                <h4 class="text-lg md:text-2xl font-bold">{item.name}</h4>
               )}
             </div>
             <div
               class="w-full h-full flex flex-col justify-center md:items-start md:pr-10 mdtext-left md:pl-4
                 text-center"
             >
-              <h4 class="text-2xl font-bold">{item.name}</h4>
-              <p class="text-lg text-gray-600">{item.description}</p>
+              <h4 class="text-lg md:text-2xl font-bold">{item.name}</h4>
+              <p class="text-md text-gray-600">{item.description}</p>
               <p class="text-sm text-gray-600">
                 Año de creación: <b>{item.date}</b>
               </p>
@@ -87,7 +104,7 @@ const customers = [
                 target="_blank"
                 class="text-blue-600 text-lg md:pr-10 py-2"
               >
-                Ver proyecto →
+                Project Link →
               </a>
             </div>
           </div>
@@ -99,7 +116,7 @@ const customers = [
       <a
         href="https://github.com/robertfrontend"
         target="_blank"
-        class="text-xl underline">Mas Proyectos →</a
+        class="text-xl underline">More Projects →</a
       >
     </div>
   </div>
@@ -113,12 +130,19 @@ const customers = [
       <!-- Project Card -->
       {
         customers.map((item) => (
-          <div class="bg-white shadow-sm rounded-lg overflow-hidden my-2">
+          <div class="bg-white  rounded-lg overflow-hidden my-2 flex flex-col justify-center items-center">
             <img
               src={item.img}
               alt="Project image"
-              class="w-full h-[220px] md:h-[250px] lg:h-[200px] object-fill rounded-md"
+              class="w-full h-[220px] md:h-[250px] lg:h-[200px] object-cover rounded-md"
             />
+            <a
+              href={item.link}
+              target="_blank"
+              class="text-blue-600 text-lg md:pr-10 py-2 my-4 d-block cursor-pointer"
+            >
+              View Website →
+            </a>
           </div>
         ))
       }

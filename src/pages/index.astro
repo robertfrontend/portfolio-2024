@@ -13,16 +13,19 @@ import Projects from "../components/Projects.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robert - Frontend Developer</title>
   </head>
-  <body class="bg-white text-gray-800 font-sans">
+  <body class="bg-gray-50 text-gray-800 font-sans">
     <!-- Header Section -->
 
-    <main class="mx-auto w-[90%] md:w-[900px] min-h-[100vh] mb-10">
+    <main
+      class="mx-auto w-full px-4 md:w-[80%] md:px-[10em] min-h-[100vh] mb-10 bg-white
+      border-l-2 border-r-2 border-gray-100"
+    >
       <header
         class="text-center py-[4em] flex flex-col justify-center items-center"
       >
         <img
           src="./full.jpg"
-          class="w-[140px] h-[140px] md:w-[200px] md:h-[200px] object-cover rounded-full"
+          class="w-[100px] h-[100px] md:w-[200px] md:h-[200px] object-cover rounded-full"
           alt=""
         />
         <div class="my-2">
@@ -32,19 +35,13 @@ import Projects from "../components/Projects.astro";
           </p>
         </div>
         <div class="mt-2">
-          <h4 class="text-3xl md:text-3xl my-2 font-semibold">About me</h4>
-          <p class="text-xl md:text-2xl font-normal text-gray-600">
+          <h4 class="text-xl md:text-3xl my-2 font-semibold">About me</h4>
+          <p class="text-md text-lg font-normal text-gray-600">
             Hi 👋, I’m Robert Romero, a frontend developer with over 4 years of
             experience. I specialize in building efficient and visually engaging
             solutions, and I’m based in Boston, MA. I’ve worked on projects in
             industries like real estate, healthcare, and insurance.
           </p>
-          <!-- <p class="text-xl md:text-2xl font-normal text-gray-600">
-            I'm a Frontend Developer with over 4 years of experience crafting
-            engaging digital experiences using React.js, Next.js, and Tailwind
-            CSS. Passionate about building impactful web solutions that blend
-            functionality and aesthetics.
-          </p> -->
         </div>
         <div class="mt-4">
           <Social />
