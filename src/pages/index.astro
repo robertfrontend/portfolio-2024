@@ -1,7 +1,5 @@
 ---
 import Services from "../components/Services.astro";
-import AboutMe from "../components/AboutMe.astro";
-import MyWorks from "../components/MyWork.astro";
 
 import Social from "../components/Social.astro";
 import Projects from "../components/Projects.astro";
@@ -11,6 +9,10 @@ import Projects from "../components/Projects.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <title>Robert - Frontend Developer</title>
   </head>
   <body class="bg-gray-50 text-gray-800 font-sans">
@@ -66,6 +68,10 @@ import Projects from "../components/Projects.astro";
         </div>
       </header>
 
+      <div class="text-center">
+        <h4 class="text-2xl my-2 font-semibold">My Services</h4>
+        <Services />
+      </div>
       <Projects />
     </main>
 

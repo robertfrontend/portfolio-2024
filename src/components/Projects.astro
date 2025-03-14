@@ -71,7 +71,7 @@ const customers = [
 <section>
   <div class="py-2 text-center">
     <h4 class="text-2xl my-2 mb-10 font-semibold">Personal Projects</h4>
-    <div class="flex flex-col gap-10 md:flex-row flex-wrap w-full">
+    <div class="flex flex-col gap-4 md:gap-10 md:flex-row flex-wrap w-full">
       {
         projects.map((item) => (
           <div
@@ -83,7 +83,7 @@ const customers = [
               {item.img ? (
                 <img
                   src={item.img || ""}
-                  class="w-full h-[60px] object-contain rounded-md "
+                  class="w-full h-[30px] md:h-[60px] object-contain rounded-md "
                   alt=""
                 />
               ) : (
