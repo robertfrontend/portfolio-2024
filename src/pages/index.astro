@@ -19,60 +19,81 @@ import Projects from "../components/Projects.astro";
     <!-- Header Section -->
 
     <main
-      class="mx-auto w-full px-4 md:w-[80%] md:px-[10em] min-h-[100vh] mb-10 bg-white
+      class="mx-auto w-full md:w-[80%] min-h-[100vh] mb-10 bg-white
       border-l-2 border-r-2 border-gray-100"
     >
-      <header
-        class="text-left md:text-center py-[4em] flex flex-col md:justify-center md:items-center"
-      >
-        <img
-          src="./full.jpg"
-          class="w-[100px] h-[100px] md:w-[150px] md:h-[150px] object-cover rounded-full"
-          alt=""
-        />
-        <div class="my-2">
-          <h2 class="text-2xl md:text-4xl font-bold">Robert Romero Medina</h2>
-          <p class="text-xl md:text-2xl md:mt-4 font-semibold text-violet">
-            Frontend Developer
-          </p>
-        </div>
-        <div class="mt-2">
-          <h4 class="text-xl md:text-3xl my-2 font-semibold">About me</h4>
-          <p class="text-md text-lg font-normal text-gray-600">
-            Hi 👋, I’m Robert Romero, a frontend developer with over 4 years of
-            experience. I specialize in building efficient and visually engaging
-            solutions, and I’m based in Boston, MA. I’ve worked on projects in
-            industries like real estate, healthcare, and insurance.
-          </p>
-        </div>
-        <div class="mt-4">
-          <Social />
-        </div>
-        <div class="flex flex-col md:flex-row gap-2 my-2">
-          <a
-            href="#contact"
-            class="md:mt-4 inline-block bg-white border border-gray-800 text-gray-800
-            px-4 py-2 rounded-md text-xl shadow-sm text-center"
-            id="contact-button"
-          >
-            Let's work together →
-          </a>
-          <a
-            href="/RobertCV.pdf"
-            download="Robert_Romero_CV.pdf"
-            class="md:mt-4 inline-block bg-white border border-gray-800 text-gray-800
-            px-4 py-2 rounded-md text-xl shadow-sm text-center"
-          >
-            Download CV →
-          </a>
+      <header class="bg-white py-4 w-full">
+        <div class="container mx-auto flex justify-between items-center px-4">
+          <h1 class="text-xl font-bold text-gray-800">Portfolio</h1>
+          <nav class="flex space-x-4">
+            <a
+              href="#services"
+              class="text-gray-800 hover:text-violet-600 underline">Services</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-800 hover:text-violet-600 underline">Projects</a
+            >
+          </nav>
         </div>
       </header>
 
-      <div class="text-center">
-        <h4 class="text-2xl my-2 font-semibold">My Services</h4>
-        <Services />
+      <div class="px-4 md:px-[10em]">
+        <section
+          class="text-left md:text-center py-[4em] flex flex-col md:justify-center md:items-center"
+        >
+          <img
+            src="./full.jpg"
+            class="w-[100px] h-[100px] md:w-[150px] md:h-[150px] object-cover rounded-full"
+            alt=""
+          />
+          <div class="my-2">
+            <h2 class="text-2xl md:text-4xl font-bold">Robert Romero Medina</h2>
+            <p class="text-xl md:text-2xl md:mt-4 font-semibold text-violet">
+              Frontend Developer
+            </p>
+          </div>
+          <div class="mt-2">
+            <h4 class="text-xl md:text-3xl my-2 font-semibold">About me</h4>
+            <p class="text-md text-lg font-normal text-gray-600">
+              Hi 👋, I’m Robert Romero, a frontend developer with over 4 years
+              of experience. I specialize in building efficient and visually
+              engaging solutions, and I’m based in Boston, MA. I’ve worked on
+              projects in industries like real estate, healthcare, and
+              insurance.
+            </p>
+          </div>
+          <div class="mt-4">
+            <Social />
+          </div>
+          <div class="flex flex-col md:flex-row gap-2 my-2">
+            <a
+              href="#contact"
+              class="md:mt-4 inline-block bg-white border border-gray-800 text-gray-800
+            px-4 py-2 rounded-md text-xl shadow-sm text-center"
+              id="contact-button"
+            >
+              Let's work together →
+            </a>
+            <a
+              href="/RobertCV.pdf"
+              download="Robert_Romero_CV.pdf"
+              class="md:mt-4 inline-block bg-white border border-gray-800 text-gray-800
+            px-4 py-2 rounded-md text-xl shadow-sm text-center"
+            >
+              Download CV →
+            </a>
+          </div>
+        </section>
+
+        <div class="text-center" id="services">
+          <h4 class="text-2xl my-2 font-semibold">My Services</h4>
+          <Services />
+        </div>
+        <div id="projects">
+          <Projects />
+        </div>
       </div>
-      <Projects />
     </main>
 
     <!-- modal -->
