@@ -1,8 +1,6 @@
 ---
-import Services from "../components/Services.astro";
-
 import Social from "../components/Social.astro";
-import Projects from "../components/Projects.astro";
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
@@ -15,29 +13,9 @@ import Projects from "../components/Projects.astro";
     <link rel="manifest" href="/site.webmanifest" />
     <title>Robert - Frontend Developer</title>
   </head>
-  <body class="bg-gray-50 text-gray-800 font-sans">
-    <!-- Header Section -->
-
-    <main
-      class="mx-auto w-full md:w-[80%] min-h-[100vh] mb-10 bg-white
-      border-l-2 border-r-2 border-gray-100"
-    >
-      <header class="bg-white py-4 w-full">
-        <div class="container mx-auto flex justify-between items-center px-4">
-          <h1 class="text-xl font-bold text-gray-800">Portfolio</h1>
-          <nav class="flex space-x-4">
-            <a
-              href="#services"
-              class="text-gray-800 hover:text-violet-600 underline">Services</a
-            >
-            <a
-              href="#projects"
-              class="text-gray-800 hover:text-violet-600 underline">Projects</a
-            >
-          </nav>
-        </div>
-      </header>
-
+  <body class="text-gray-800 font-sans">
+    <main class="mx-auto w-full lg:w-[80%] min-h-[100vh] mb-10 bg-white">
+      <Header />
       <div class="px-4 md:px-[10em]">
         <section
           class="text-left md:text-center py-[4em] flex flex-col md:justify-center md:items-center"
@@ -48,52 +26,62 @@ import Projects from "../components/Projects.astro";
             alt=""
           />
           <div class="my-2">
-            <h2 class="text-2xl md:text-4xl font-bold">Robert Romero Medina</h2>
-            <p class="text-xl md:text-2xl md:mt-4 font-semibold text-violet">
+            <h2 class="text-2xl md:text-4xl font-normal">
+              Robert Romero Medina
+            </h2>
+            <p class="text-xl md:text-2xl md:mt-4 font-light">
               Frontend Developer
             </p>
           </div>
           <div class="mt-2">
-            <h4 class="text-xl md:text-3xl my-2 font-semibold">About me</h4>
-            <p class="text-md text-lg font-normal text-gray-600">
-              Hi 👋, I’m Robert Romero, a frontend developer with over 4 years
-              of experience. I specialize in building efficient and visually
+            <h4 class="text-xl md:text-3xl my-2 font-normal">About me</h4>
+            <p class="text-md text-lg font-light text-gray-600">
+              Hi, I’m Robert Romero, a frontend developer with over 4 years of
+              experience. I specialize in building efficient and visually
               engaging solutions, and I’m based in Boston, MA. I’ve worked on
               projects in industries like real estate, healthcare, and
               insurance.
             </p>
+            <br />
+            <p class="text-md text-lg font-light text-gray-600">
+              I was born on a beautiful island in the Caribbean called the
+              Dominican Republic. I started my journey in programming in 2019 as
+              a self-taught developer. I received a scholarship from Platzi and
+              Facebook Developer Circles to train as a Frontend Developer.
+              <br />
+              <br />
+              Skills: (Development) I enjoy creating client-side logic and understanding
+              how users interact with web applications. (Layout) I consider myself
+              proficient in layout design, and I have the ability to create layouts
+              without a pre-existing design. Currently, I am skilled in creating
+              products and monetizing them.
+            </p>
+          </div>
+          <div class="flex flex-col md:flex-row gap-2 my-2">
+            <a
+              href="/RobertCV.pdf"
+              download="Robert_Romero_CV.pdf"
+              class="underline"
+            >
+              Download CV →
+            </a>
+            <a
+              href="https://www.diforvi.com/"
+              target="_blank"
+              class="underline"
+            >
+              See my services →
+            </a>
+            <a href="/projects" class="underline"> See my projects → </a>
           </div>
           <div class="mt-4">
             <Social />
           </div>
-          <div class="flex flex-col md:flex-row gap-2 my-2">
-            <a
-              href="#contact"
-              class="md:mt-4 inline-block bg-white border border-gray-800 text-gray-800
-            px-4 py-2 rounded-md text-xl shadow-sm text-center"
-              id="contact-button"
-            >
-              Let's work together →
-            </a>
-            <a
-              href="/RobertCV.pdf"
-              download="Robert_Romero_CV.pdf"
-              class="md:mt-4 inline-block bg-white border border-gray-800 text-gray-800
-            px-4 py-2 rounded-md text-xl shadow-sm text-center"
-            >
-              Download CV →
-            </a>
-          </div>
         </section>
-
-        <div class="text-center" id="services">
-          <h4 class="text-2xl my-2 font-semibold">My Services</h4>
-          <Services />
-        </div>
-        <div id="projects">
-          <Projects />
-        </div>
       </div>
+      <footer class="text-gray-800 text-center">
+        <p>&copy; 2025 Robert Frontend. All rights reserved.</p>
+      </footer>
     </main>
 
     <!-- modal -->
@@ -149,13 +137,6 @@ import Projects from "../components/Projects.astro";
         </div>
       </div>
     </dialog>
-
-    <br />
-    <Social />
-
-    <footer class="bg-gray-50 text-gray-800 text-center py-10 mt-8">
-      <p>&copy; 2025 Robert Frontend. All rights reserved.</p>
-    </footer>
   </body>
 </html>
 
