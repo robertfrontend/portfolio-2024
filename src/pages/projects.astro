@@ -3,18 +3,31 @@ import MyProjects from "../components/MyProjects.astro";
 import Header from "../components/Header.astro";
 ---
 
-<div>
-  <Header />
-  <section id="projects" class="py-8">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-bold text-gray-800 mb-4">My Projects</h2>
-      <p class="text-md text-lg font-light text-gray-600">
-        Here are some of the projects I have worked on. Each project showcases
-        my skills and experience in web development, including front-end and
-        back-end technologies. I am passionate about creating efficient and
-        scalable solutions.
-      </p>
-      <MyProjects />
-    </div>
-  </section>
-</div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Robert | My Projects</title>
+  </head>
+  <body class="text-gray-800 font-sans">
+    <main>
+      <Header />
+      <section id="projects" class="py-8">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">My Projects</h2>
+          <p class="text-md text-lg font-light text-gray-600">
+            Here are some of the projects I have worked on. Each project
+            showcases my skills and experience in web development, including
+            front-end and back-end technologies. I am passionate about creating
+            efficient and scalable solutions.
+          </p>
+          <MyProjects />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
