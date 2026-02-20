@@ -90,15 +90,15 @@ const customers = [
             hover:border-violet-500/50 hover:bg-white/10 transition-all duration-300 group
             md:flex-row md:items-center"
           >
-            <div class="w-full md:w-[200px] flex-shrink-0">
+            <div class="w-full md:w-[240px] flex-shrink-0">
               {item.img ? (
                 <img
                   src={item.img || ""}
-                  class="w-full h-[60px] object-contain rounded-md filter grayscale group-hover:grayscale-0 transition-all"
+                  class="w-full h-[80px] md:h-[100px] object-contain rounded-md filter grayscale group-hover:grayscale-0 transition-all"
                   alt={item.name}
                 />
               ) : (
-                <div class="h-[60px] flex items-center justify-center bg-violet-500/20 rounded-md">
+                <div class="h-[80px] md:h-[100px] flex items-center justify-center bg-violet-500/20 rounded-md">
                    <h4 class="text-xl font-bold text-violet-300">{item.name}</h4>
                 </div>
               )}
