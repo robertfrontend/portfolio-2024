@@ -13,19 +13,25 @@ import Header from "../components/Header.astro";
     <link rel="manifest" href="/site.webmanifest" />
     <title>Robert | My Projects</title>
   </head>
-  <body class="text-gray-800 font-sans">
-    <main>
+  <body class="text-white font-sans bg-dark-purple relative overflow-x-hidden">
+    <!-- Glow effects -->
+    <div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-600/10 blur-[120px] rounded-full -z-10"></div>
+    <div class="absolute bottom-[10%] left-[-10%] w-[30%] h-[30%] bg-violet-500/5 blur-[100px] rounded-full -z-10"></div>
+
+    <main class="mx-auto w-full lg:w-[80%] min-h-[100vh] mb-10">
       <Header />
-      <section id="projects" class="py-8">
+      <section id="projects" class="py-12">
         <div class="container mx-auto px-4">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">My Projects</h2>
-          <p class="text-md text-lg font-light text-gray-600">
+          <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-violet-400 mb-6">My Projects</h2>
+          <p class="text-lg font-light text-gray-400 max-w-3xl leading-relaxed">
             Here are some of the projects I have worked on. Each project
             showcases my skills and experience in web development, including
             front-end and back-end technologies. I am passionate about creating
             efficient and scalable solutions.
           </p>
-          <MyProjects />
+          <div class="mt-12">
+            <MyProjects />
+          </div>
         </div>
       </section>
     </main>

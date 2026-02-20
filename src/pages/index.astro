@@ -1,6 +1,30 @@
 ---
 import Social from "../components/Social.astro";
 import Header from "../components/Header.astro";
+import MyProjects from "../components/MyProjects.astro";
+
+const services = [
+  {
+    title: "Responsive Web Development",
+    description: "Building fast, modern websites that work perfectly on any screen size.",
+    icon: "🌐"
+  },
+  {
+    title: "Custom Web Applications",
+    description: "Creating powerful, scalable apps using React, Astro, and modern tools.",
+    icon: "🚀"
+  },
+  {
+    title: "UI/UX Implementation",
+    description: "Turning designs into pixel-perfect, interactive user experiences.",
+    icon: "🎨"
+  },
+  {
+    title: "Performance Optimization",
+    description: "Speeding up your site for better SEO and user satisfaction.",
+    icon: "⚡"
+  }
+];
 ---
 
 <html lang="en">
@@ -13,129 +37,266 @@ import Header from "../components/Header.astro";
     <link rel="manifest" href="/site.webmanifest" />
     <title>Robert - Frontend Developer</title>
   </head>
-  <body class="text-gray-800 font-sans">
-    <main class="mx-auto w-full lg:w-[80%] min-h-[100vh] mb-10 bg-white">
+  <body class="text-white font-sans bg-dark-purple overflow-x-hidden relative">
+    <!-- Glow effects -->
+    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-violet-600/20 blur-[120px] rounded-full -z-10"></div>
+    <div class="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] bg-violet-500/10 blur-[100px] rounded-full -z-10"></div>
+
+    <main class="mx-auto w-full lg:w-[80%] min-h-[100vh] mb-10">
       <Header />
       <div class="px-4 md:px-[10em]">
         <section
-          class="text-left md:text-center py-[2em] md:py-[4em] flex flex-col md:justify-center md:items-center"
+          class="text-left md:text-center py-[2em] md:py-[6em] flex flex-col md:justify-center md:items-center"
         >
-          <img
-            src="./full.jpg"
-            class="w-[100px] h-[100px] md:w-[150px] md:h-[150px] object-cover rounded-full"
-            alt=""
-          />
-          <div class="my-2">
-            <h2 class="text-2xl md:text-4xl font-normal">
+          <!-- Status Badge -->
+          <div class="mb-8 animate-bounce">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              </span>
+              Actively looking for work
+            </span>
+          </div>
+
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-violet-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <img
+              src="./full.jpg"
+              class="relative w-[120px] h-[120px] md:w-[180px] md:h-[180px] object-cover rounded-full border-2 border-white/10"
+              alt="Robert Romero Medina"
+            />
+          </div>
+          
+          <div class="my-6">
+            <h2 class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-violet-400">
               Robert Romero Medina
             </h2>
-            <p class="text-xl md:text-2xl md:mt-4 font-light">
+            <p class="text-xl md:text-2xl mt-2 md:mt-4 font-light text-violet-300">
               Frontend Developer
             </p>
           </div>
-          <div class="mt-2">
-            <h4 class="text-xl md:text-3xl my-2 font-normal">About me</h4>
-            <p class="text-md text-lg font-light text-gray-600">
-              Hi, I’m Robert Romero, a frontend developer with over 4 years of
-              experience. I specialize in building efficient and visually
-              engaging solutions, and I’m based in Boston, MA. I’ve worked on
-              projects in industries like real estate, healthcare, and
-              insurance.
-            </p>
-            <br />
-            <p class="text-md text-lg font-light text-gray-600">
-              I was born on a beautiful island in the Caribbean called the
-              Dominican Republic. I started my journey in programming in 2019 as
-              a self-taught developer. I received a scholarship from Platzi and
-              Facebook Developer Circles to train as a Frontend Developer.
-              <br />
-              <br />
-              Skills: (Development) I enjoy creating client-side logic and understanding
-              how users interact with web applications. (Layout) I consider myself
-              proficient in layout design, and I have the ability to create layouts
-              without a pre-existing design. Currently, I am skilled in creating
-              products and monetizing them.
-            </p>
+
+          <div class="mt-8 max-w-3xl text-left md:text-center">
+            <h4 class="text-2xl md:text-3xl my-4 font-semibold text-white/90">About me</h4>
+            <div class="space-y-4 text-lg font-light text-gray-400 leading-relaxed">
+              <p>
+                Hi, I’m <span class="text-white font-normal">Robert Romero</span>, a frontend developer with over 4 years of
+                experience. I specialize in building efficient and visually
+                engaging solutions, based in <span class="text-violet-400">Boston, MA</span>.
+              </p>
+              <p>
+                Born in the <span class="text-white font-normal text-emerald-400">Dominican Republic</span> 🇩🇴. I started my journey in 2019, receiving a scholarship from Platzi and Facebook Developer Circles.
+              </p>
+              <p>
+                I enjoy creating client-side logic and crafting intuitive user experiences. <span class="text-white font-normal">I love creating products</span> and I'm currently focusing on building and monetizing impactful solutions.
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col md:flex-row gap-2 my-6">
+
+          <div class="flex flex-col md:flex-row gap-6 my-10 items-center">
             <a
               href="/RobertCV.pdf"
               download="Robert_Romero_CV.pdf"
-              class="underline"
+              class="px-8 py-3 bg-white text-dark-purple font-bold rounded-full hover:bg-violet-100 transition-colors"
             >
-              Download CV →
+              Download CV
             </a>
-            <a
-              href="https://www.diforvi.com/"
-              target="_blank"
-              class="underline"
-            >
-              See my services →
-            </a>
-            <a href="/projects" class="underline"> See my projects → </a>
+            <div class="flex gap-4">
+              <a
+                href="#services"
+                class="text-white/80 hover:text-white underline underline-offset-8 decoration-violet-500/50 hover:decoration-violet-500 transition-all"
+              >
+                Services
+              </a>
+              <a href="#projects" class="text-white/80 hover:text-white underline underline-offset-8 decoration-violet-500/50 hover:decoration-violet-500 transition-all">
+                Projects
+              </a>
+            </div>
           </div>
-          <div class="mt-4">
+          
+          <div class="mt-4 opacity-80 hover:opacity-100 transition-opacity">
             <Social />
           </div>
         </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 border-t border-white/5">
+          <div class="text-center mb-16">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">My Services</h3>
+            <p class="text-gray-400 text-lg">Specialized solutions for your digital needs.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map(service => (
+              <div class="p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-violet-500/50 transition-all duration-300 group">
+                <div class="text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">
+                  {service.icon}
+                </div>
+                <h4 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
+                  {service.title}
+                </h4>
+                <p class="text-gray-400 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <div id="projects">
+          <MyProjects />
+        </div>
+
+        <!-- Open Source CTA -->
+        <section class="py-20 mt-10 border-t border-white/5 text-center">
+          <div class="bg-gradient-to-br from-violet-600/10 to-purple-600/10 border border-white/10 rounded-[2rem] p-10 md:p-16 backdrop-blur-sm">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Love this portfolio?</h3>
+            <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+              This project is <span class="text-violet-400 font-semibold">Open Source</span>! Feel free to clone it, customize it, and use it as your own. Star it on GitHub if you find it useful.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+              <a 
+                href="https://github.com/robertfrontend/portfolio-2024" 
+                target="_blank"
+                class="flex items-center gap-3 px-8 py-4 bg-white text-dark-purple font-bold rounded-full hover:bg-violet-100 transition-all text-lg shadow-xl shadow-white/5"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Star on GitHub
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
-      <footer class="text-gray-800 text-center">
-        <p>&copy; 2025 Robert Frontend. All rights reserved.</p>
+      <footer class="text-gray-500 text-center py-10 border-t border-white/5">
+        <p>&copy; 2025 Robert Frontend. Crafted with ❤️</p>
       </footer>
     </main>
 
     <!-- modal -->
     <dialog id="modalContact" class="modal">
-      <div class="modal-box text-center">
-        <h3 class="font-bold text-black text-2xl">Where you can talk to me</h3>
+      <div class="modal-box bg-[#1a0b3b] border border-white/10 text-center shadow-2xl shadow-violet-500/20">
+        <h3 class="font-bold text-white text-3xl mb-6">Let's Connect</h3>
 
         <ul class="space-y-4 mt-4">
-          <li class="flex items-center">
-            <!-- <span class="font-semibold">Email </span> -->
+          <li>
             <a
               target="_blank"
               href="mailto:robert02frontend@gmail.com"
-              class="btn btn-lg w-full ml-2 font-bold bg-transparent border border-gray-50 hover:bg-transparent"
+              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-violet-600 hover:border-violet-500 transition-all font-bold"
             >
               Email
             </a>
           </li>
-          <li class="flex items-center">
+          <li>
             <a
               target="_blank"
               href="https://wa.me/18573975959"
-              class="btn btn-lg w-full ml-2 font-bold bg-transparent border border-gray-50 hover:bg-transparent"
+              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-emerald-600 hover:border-emerald-500 transition-all font-bold"
             >
-              WhatsApp</a
-            >
+              WhatsApp
+            </a>
           </li>
-          <li class="flex items-center">
+          <li>
             <a
               target="_blank"
               href="https://instagram.com/robertfrontend"
-              class="btn btn-lg w-full ml-2 font-bold bg-transparent border border-gray-50 hover:bg-transparent"
+              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-pink-600 hover:border-pink-500 transition-all font-bold"
             >
-              Instagram</a
-            >
+              Instagram
+            </a>
           </li>
-          <li class="flex items-center">
+          <li>
             <a
               target="_blank"
               href="https://linkedin.com/in/robertfrontend"
-              class="btn btn-lg w-full ml-2 font-bold bg-transparent border border-gray-50 hover:bg-transparent"
+              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-blue-600 hover:border-blue-500 transition-all font-bold"
             >
-              LinkedIn</a
-            >
+              LinkedIn
+            </a>
           </li>
         </ul>
 
         <div class="modal-action">
           <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
-            <button class="btn">Close</button>
+            <button class="px-6 py-2 rounded-lg text-gray-400 hover:text-white transition-colors">Close</button>
           </form>
         </div>
       </div>
+      <form method="dialog" class="modal-backdrop bg-black/60 backdrop-blur-sm">
+        <button>close</button>
+      </form>
+    </dialog>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("contact-button");
+    if (button) {
+      button.addEventListener("click", () => {
+        const modal = document.getElementById("modalContact");
+        if (modal) {
+          (modal as HTMLDialogElement).showModal();
+        }
+      });
+    }
+  });
+</script>
+
+    <!-- modal -->
+    <dialog id="modalContact" class="modal">
+      <div class="modal-box bg-[#1a0b3b] border border-white/10 text-center shadow-2xl shadow-violet-500/20">
+        <h3 class="font-bold text-white text-3xl mb-6">Let's Connect</h3>
+
+        <ul class="space-y-4 mt-4">
+          <li>
+            <a
+              target="_blank"
+              href="mailto:robert02frontend@gmail.com"
+              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-violet-600 hover:border-violet-500 transition-all font-bold"
+            >
+              Email
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://wa.me/18573975959"
+              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-emerald-600 hover:border-emerald-500 transition-all font-bold"
+            >
+              WhatsApp
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://instagram.com/robertfrontend"
+              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-pink-600 hover:border-pink-500 transition-all font-bold"
+            >
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://linkedin.com/in/robertfrontend"
+              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-blue-600 hover:border-blue-500 transition-all font-bold"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="px-6 py-2 rounded-lg text-gray-400 hover:text-white transition-colors">Close</button>
+          </form>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop bg-black/60 backdrop-blur-sm">
+        <button>close</button>
+      </form>
     </dialog>
   </body>
 </html>
