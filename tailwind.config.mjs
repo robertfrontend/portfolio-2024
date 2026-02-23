@@ -6,6 +6,27 @@ export default {
       colors: {
         violet: "#5D22EB",
         "dark-purple": "#0f022e",
+        "studio-dark": "#0a0f18",
+        "studio-card": "#111827",
+      },
+      fontFamily: {
+        display: ["Outfit", "sans-serif"],
+        sans: ["Plus Jakarta Sans", "sans-serif"],
+      },
+      keyframes: {
+        "fade-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        "fade-in-up": "fade-in-up 0.6s ease-out both",
       },
     },
   },
