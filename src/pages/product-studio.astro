@@ -2,10 +2,10 @@
 ---
 
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es" class="scroll-smooth overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Robert Romero — Product Studio</title>
     <!-- Professional Google Fonts -->
@@ -327,6 +327,14 @@
       @tailwind base;
       @tailwind components;
       @tailwind utilities;
+
+      html, body {
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
       :root {
         --font-display: "Outfit", sans-serif;
