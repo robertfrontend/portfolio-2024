@@ -44,6 +44,56 @@ const services = [
 
     <main class="mx-auto w-full lg:w-[80%] min-h-[100vh] mb-10">
       <Header />
+
+      <!-- Product Studio Highlight Section (Now at the top, Full Width relative to main) -->
+      <section class="py-10 md:py-20 w-full overflow-hidden">
+        <div class="mx-auto px-4 md:px-[4em] lg:px-0">
+          <a href="/product-studio" class="block relative group cursor-pointer overflow-hidden rounded-[2rem] bg-gradient-to-br from-studio-card to-studio-dark border border-white/10 p-8 md:p-16 transition-all duration-500 hover:border-emerald-500/30 shadow-2xl shadow-emerald-500/5">
+            <!-- Decorative glow -->
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-emerald-500/10 blur-[80px] rounded-full group-hover:bg-emerald-500/20 transition-colors"></div>
+            
+            <div class="relative flex flex-col lg:flex-row items-center gap-10">
+              <div class="flex-1 text-left">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-6">
+                  NEW: PRODUCT STUDIO
+                </span>
+                <h3 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                  Building the future of <span class="text-emerald-400">digital platforms</span>
+                </h3>
+                <p class="text-gray-400 text-lg mb-8 max-w-xl leading-relaxed">
+                  Explore my personal studio where I develop scalable software tools and innovative digital solutions like MenuDrapp, Thiscita, and La Liguita.
+                </p>
+                <div 
+                  class="inline-flex items-center gap-2 text-white font-semibold group-hover:text-emerald-400 transition-colors text-lg underline underline-offset-8 decoration-white/20 hover:decoration-emerald-400/50"
+                >
+                  View all products
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-2 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
+              
+              <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:translate-y-[-4px] transition-transform duration-500">
+                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 mb-4 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
+                  <h4 class="text-white font-bold mb-1 text-xl">MenuDrapp</h4>
+                  <p class="text-gray-500 text-sm">Restaurant management</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:translate-y-[-8px] transition-transform duration-500 delay-75">
+                  <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mb-4 shadow-[0_0_8px_rgba(59,130,246,0.5)]"></div>
+                  <h4 class="text-white font-bold mb-1 text-xl">Thiscita</h4>
+                  <p class="text-gray-500 text-sm">Professional scheduling</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:translate-y-[-2px] transition-transform duration-500 delay-150 sm:col-span-2">
+                  <div class="w-2.5 h-2.5 rounded-full bg-orange-500 mb-4 shadow-[0_0_8px_rgba(249,115,22,0.5)]"></div>
+                  <h4 class="text-white font-bold mb-1 text-xl">La Liguita</h4>
+                  <p class="text-gray-500 text-sm">Real-time sports management</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      
+      <!-- Padded container for all other content -->
       <div class="px-4 md:px-[10em]">
         <section
           class="text-left md:text-center py-[2em] md:py-[6em] flex flex-col md:justify-center md:items-center"
@@ -94,22 +144,23 @@ const services = [
             </div>
           </div>
 
-          <div class="flex flex-col md:flex-row gap-6 my-10 items-center">
+          <div class="flex flex-col md:flex-row gap-8 my-10 items-center">
             <a
-              href="/RobertCV.pdf"
-              download="Robert_Romero_CV.pdf"
-              class="px-8 py-3 bg-white text-dark-purple font-bold rounded-full hover:bg-violet-100 transition-colors"
+              href="/product-studio"
+              class="px-10 py-4 bg-violet-600 text-white font-bold rounded-full hover:bg-violet-700 transition-all shadow-xl shadow-violet-500/20 flex items-center gap-3 group text-lg"
             >
-              Download CV
+              🚀 Product Studio
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
-            <div class="flex gap-4">
+            
+            <div class="flex gap-6">
               <a
                 href="#services"
-                class="text-white/80 hover:text-white underline underline-offset-8 decoration-violet-500/50 hover:decoration-violet-500 transition-all"
+                class="text-white/60 hover:text-white underline underline-offset-8 decoration-violet-500/30 hover:decoration-violet-500 transition-all font-medium"
               >
                 Services
               </a>
-              <a href="#projects" class="text-white/80 hover:text-white underline underline-offset-8 decoration-violet-500/50 hover:decoration-violet-500 transition-all">
+              <a href="#projects" class="text-white/60 hover:text-white underline underline-offset-8 decoration-violet-500/30 hover:decoration-violet-500 transition-all font-medium">
                 Projects
               </a>
             </div>
@@ -168,81 +219,11 @@ const services = [
           </div>
         </section>
       </div>
+
       <footer class="text-gray-500 text-center py-10 border-t border-white/5">
         <p>&copy; 2025 Robert Frontend. Created with ❤️</p>
       </footer>
     </main>
-
-    <!-- modal -->
-    <dialog id="modalContact" class="modal">
-      <div class="modal-box bg-[#1a0b3b] border border-white/10 text-center shadow-2xl shadow-violet-500/20">
-        <h3 class="font-bold text-white text-3xl mb-6">Let's Connect</h3>
-
-        <ul class="space-y-4 mt-4">
-          <li>
-            <a
-              target="_blank"
-              href="mailto:robert02frontend@gmail.com"
-              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-violet-600 hover:border-violet-500 transition-all font-bold"
-            >
-              Email
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://wa.me/18573975959"
-              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-emerald-600 hover:border-emerald-500 transition-all font-bold"
-            >
-              WhatsApp
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://instagram.com/robertfrontend"
-              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-pink-600 hover:border-pink-500 transition-all font-bold"
-            >
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://linkedin.com/in/robertfrontend"
-              class="flex items-center justify-center btn btn-lg w-full bg-white/5 border border-white/10 text-white hover:bg-blue-600 hover:border-blue-500 transition-all font-bold"
-            >
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-
-        <div class="modal-action">
-          <form method="dialog">
-            <button class="px-6 py-2 rounded-lg text-gray-400 hover:text-white transition-colors">Close</button>
-          </form>
-        </div>
-      </div>
-      <form method="dialog" class="modal-backdrop bg-black/60 backdrop-blur-sm">
-        <button>close</button>
-      </form>
-    </dialog>
-  </body>
-</html>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const button = document.getElementById("contact-button");
-    if (button) {
-      button.addEventListener("click", () => {
-        const modal = document.getElementById("modalContact");
-        if (modal) {
-          (modal as HTMLDialogElement).showModal();
-        }
-      });
-    }
-  });
-</script>
 
     <!-- modal -->
     <dialog id="modalContact" class="modal">
