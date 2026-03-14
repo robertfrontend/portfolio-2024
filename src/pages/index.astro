@@ -6,38 +6,45 @@ import MyProjects from "../components/MyProjects.astro";
 const services = [
   {
     title: "Responsive Web Development",
-    description: "Building fast, modern websites that work perfectly on any screen size.",
-    icon: "🌐"
+    description:
+      "Building fast, modern websites that work perfectly on any screen size.",
+    icon: "🌐",
   },
   {
     title: "Custom Web Applications",
-    description: "Creating powerful, scalable apps using React, Astro, and modern tools.",
-    icon: "🚀"
+    description:
+      "Creating powerful, scalable apps using React, Astro, and modern tools.",
+    icon: "🚀",
   },
   {
     title: "UI/UX Implementation",
-    description: "Turning designs into pixel-perfect, interactive user experiences.",
-    icon: "🎨"
+    description:
+      "Turning designs into pixel-perfect, interactive user experiences.",
+    icon: "🎨",
   },
   {
     title: "Performance Optimization",
     description: "Speeding up your site for better SEO and user satisfaction.",
-    icon: "⚡"
-  }
+    icon: "⚡",
+  },
 ];
 ---
 
 <html lang="en" class="overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <title>Robert - Frontend Developer</title>
     <style is:global>
-      html, body {
+      html,
+      body {
         overflow-x: hidden;
         position: relative;
         width: 100%;
@@ -48,60 +55,18 @@ const services = [
   </head>
   <body class="text-white font-sans bg-dark-purple overflow-x-hidden relative">
     <!-- Glow effects -->
-    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-violet-600/20 blur-[120px] rounded-full -z-10"></div>
-    <div class="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] bg-violet-500/10 blur-[100px] rounded-full -z-10"></div>
+    <div
+      class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-violet-600/20 blur-[120px] rounded-full -z-10"
+    >
+    </div>
+    <div
+      class="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] bg-violet-500/10 blur-[100px] rounded-full -z-10"
+    >
+    </div>
 
     <main class="mx-auto w-full lg:w-[80%] min-h-[100vh] mb-10">
       <Header />
 
-      <!-- Product Studio Highlight Section (Now at the top, Full Width relative to main) -->
-      <section class="py-10 md:py-20 w-full overflow-hidden">
-        <div class="mx-auto px-4 md:px-[4em] lg:px-0">
-          <a href="/product-studio" class="block relative group cursor-pointer overflow-hidden rounded-[2rem] bg-gradient-to-br from-studio-card to-studio-dark border border-white/10 p-8 md:p-16 transition-all duration-500 hover:border-emerald-500/30 shadow-2xl shadow-emerald-500/5">
-            <!-- Decorative glow -->
-            <div class="absolute -top-24 -right-24 w-64 h-64 bg-emerald-500/10 blur-[80px] rounded-full group-hover:bg-emerald-500/20 transition-colors"></div>
-            
-            <div class="relative flex flex-col lg:flex-row items-center gap-10">
-              <div class="flex-1 text-left">
-                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-6">
-                  NEW: PRODUCT STUDIO
-                </span>
-                <h3 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                  Building the future of <span class="text-emerald-400">digital platforms</span>
-                </h3>
-                <p class="text-gray-400 text-lg mb-8 max-w-xl leading-relaxed">
-                  Explore my personal studio where I develop scalable software tools and innovative digital solutions like MenuDrapp, Thiscita, and La Liguita.
-                </p>
-                <div 
-                  class="inline-flex items-center gap-2 text-white font-semibold group-hover:text-emerald-400 transition-colors text-lg underline underline-offset-8 decoration-white/20 hover:decoration-emerald-400/50"
-                >
-                  View all products
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-2 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                </div>
-              </div>
-              
-              <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:translate-y-[-4px] transition-transform duration-500">
-                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 mb-4 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
-                  <h4 class="text-white font-bold mb-1 text-xl">MenuDrapp</h4>
-                  <p class="text-gray-500 text-sm">Restaurant management</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:translate-y-[-8px] transition-transform duration-500 delay-75">
-                  <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mb-4 shadow-[0_0_8px_rgba(59,130,246,0.5)]"></div>
-                  <h4 class="text-white font-bold mb-1 text-xl">Thiscita</h4>
-                  <p class="text-gray-500 text-sm">Professional scheduling</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:translate-y-[-2px] transition-transform duration-500 delay-150 sm:col-span-2">
-                  <div class="w-2.5 h-2.5 rounded-full bg-orange-500 mb-4 shadow-[0_0_8px_rgba(249,115,22,0.5)]"></div>
-                  <h4 class="text-white font-bold mb-1 text-xl">La Liguita</h4>
-                  <p class="text-gray-500 text-sm">Real-time sports management</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
-      
       <!-- Padded container for all other content -->
       <div class="px-4 md:px-[10em]">
         <section
@@ -109,46 +74,74 @@ const services = [
         >
           <!-- Status Badge -->
           <div class="mb-8 animate-bounce">
-            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium"
+            >
               <span class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"
+                ></span>
               </span>
               Actively looking for work
             </span>
           </div>
 
           <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-violet-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-violet-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"
+            >
+            </div>
             <img
               src="./full.jpg"
               class="relative w-[120px] h-[120px] md:w-[180px] md:h-[180px] object-cover rounded-full border-2 border-white/10"
               alt="Robert Romero Medina"
             />
           </div>
-          
+
           <div class="my-6">
-            <h2 class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-violet-400">
+            <h2
+              class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-violet-400"
+            >
               Robert Romero Medina
             </h2>
-            <p class="text-xl md:text-2xl mt-2 md:mt-4 font-light text-violet-300">
+            <p
+              class="text-xl md:text-2xl mt-2 md:mt-4 font-light text-violet-300"
+            >
               Frontend Developer
             </p>
           </div>
 
           <div class="mt-8 max-w-3xl text-left md:text-center">
-            <h4 class="text-2xl md:text-3xl my-4 font-semibold text-white/90">About me</h4>
-            <div class="space-y-4 text-lg font-light text-gray-400 leading-relaxed">
+            <h4 class="text-2xl md:text-3xl my-4 font-semibold text-white/90">
+              About me
+            </h4>
+            <div
+              class="space-y-4 text-lg font-light text-gray-400 leading-relaxed"
+            >
               <p>
-                Hi, I’m <span class="text-white font-normal">Robert Romero</span>, a frontend developer with over 4 years of
-                experience. I specialize in building efficient and visually
-                engaging solutions, based in <span class="text-violet-400">Boston, MA</span>.
+                Hi, I’m <span class="text-white font-normal">Robert Romero</span
+                >, a frontend developer with over 4 years of experience. I
+                specialize in building efficient and visually engaging
+                solutions, based in <span class="text-violet-400"
+                  >Boston, MA</span
+                >.
               </p>
               <p>
-                Born in the <span class="text-white font-normal text-emerald-400">Dominican Republic</span> 🇩🇴. I started my journey in 2019, receiving a scholarship from Platzi and Facebook Developer Circles.
+                Born in the <span
+                  class="text-white font-normal text-emerald-400"
+                  >Dominican Republic</span
+                > 🇩🇴. I started my journey in 2019, receiving a scholarship from
+                Platzi and Facebook Developer Circles.
               </p>
               <p>
-                I enjoy creating client-side logic and crafting intuitive user experiences. <span class="text-white font-normal">I love creating products</span> and I'm currently focusing on building and monetizing impactful solutions.
+                I enjoy creating client-side logic and crafting intuitive user
+                experiences. <span class="text-white font-normal"
+                  >I love creating products</span
+                > and I'm currently focusing on building and monetizing impactful
+                solutions.
               </p>
             </div>
           </div>
@@ -159,9 +152,21 @@ const services = [
               class="px-10 py-4 bg-violet-600 text-white font-bold rounded-full hover:bg-violet-700 transition-all shadow-xl shadow-violet-500/20 flex items-center gap-3 group text-lg"
             >
               🚀 Product Studio
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="group-hover:translate-x-1 transition-transform"
+                ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+              >
             </a>
-            
+
             <div class="flex gap-6">
               <a
                 href="#services"
@@ -169,12 +174,15 @@ const services = [
               >
                 Services
               </a>
-              <a href="#projects" class="text-white/60 hover:text-white underline underline-offset-8 decoration-violet-500/30 hover:decoration-violet-500 transition-all font-medium">
+              <a
+                href="#projects"
+                class="text-white/60 hover:text-white underline underline-offset-8 decoration-violet-500/30 hover:decoration-violet-500 transition-all font-medium"
+              >
                 Projects
               </a>
             </div>
           </div>
-          
+
           <div class="mt-4 opacity-80 hover:opacity-100 transition-opacity">
             <Social />
           </div>
@@ -183,26 +191,126 @@ const services = [
         <!-- Services Section -->
         <section id="services" class="py-20 border-t border-white/5">
           <div class="text-center mb-16">
-            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">My Services</h3>
-            <p class="text-gray-400 text-lg">Specialized solutions for your digital needs.</p>
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">
+              My Services
+            </h3>
+            <p class="text-gray-400 text-lg">
+              Specialized solutions for your digital needs.
+            </p>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map(service => (
-              <div class="p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-violet-500/50 transition-all duration-300 group">
-                <div class="text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">
-                  {service.icon}
+            {
+              services.map((service) => (
+                <div class="p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-violet-500/50 transition-all duration-300 group">
+                  <div class="text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">
+                    {service.icon}
+                  </div>
+                  <h4 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
+                    {service.title}
+                  </h4>
+                  <p class="text-gray-400 leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
-                <h4 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
-                  {service.title}
-                </h4>
-                <p class="text-gray-400 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            ))}
+              ))
+            }
           </div>
         </section>
+      </div>
 
+      <!-- Product Studio Highlight Section (Now at the top, Full Width relative to main) -->
+      <section class="py-10 md:py-20 w-full overflow-hidden">
+        <div class="mx-auto px-4 md:px-[4em] lg:px-0">
+          <a
+            href="/product-studio"
+            class="block relative group cursor-pointer overflow-hidden rounded-[2rem] bg-gradient-to-br from-studio-card to-studio-dark border border-white/10 p-8 md:p-16 transition-all duration-500 hover:border-emerald-500/30 shadow-2xl shadow-emerald-500/5"
+          >
+            <!-- Decorative glow -->
+            <div
+              class="absolute -top-24 -right-24 w-64 h-64 bg-emerald-500/10 blur-[80px] rounded-full group-hover:bg-emerald-500/20 transition-colors"
+            >
+            </div>
+
+            <div class="relative flex flex-col lg:flex-row items-center gap-10">
+              <div class="flex-1 text-left">
+                <span
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-6"
+                >
+                  NEW: PRODUCT STUDIO
+                </span>
+                <h3
+                  class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight"
+                >
+                  Building the future of <span class="text-emerald-400"
+                    >digital platforms</span
+                  >
+                </h3>
+                <p class="text-gray-400 text-lg mb-8 max-w-xl leading-relaxed">
+                  Explore my personal studio where I develop scalable software
+                  tools and innovative digital solutions like MenuDrapp,
+                  Thiscita, and La Liguita.
+                </p>
+                <div
+                  class="inline-flex items-center gap-2 text-white font-semibold group-hover:text-emerald-400 transition-colors text-lg underline underline-offset-8 decoration-white/20 hover:decoration-emerald-400/50"
+                >
+                  View all products
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="group-hover:translate-x-2 transition-transform"
+                    ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"
+                    ></path></svg
+                  >
+                </div>
+              </div>
+
+              <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                <div
+                  class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:translate-y-[-4px] transition-transform duration-500"
+                >
+                  <div
+                    class="w-2.5 h-2.5 rounded-full bg-emerald-500 mb-4 shadow-[0_0_8px_rgba(16,185,129,0.5)]"
+                  >
+                  </div>
+                  <h4 class="text-white font-bold mb-1 text-xl">MenuDrapp</h4>
+                  <p class="text-gray-500 text-sm">Restaurant management</p>
+                </div>
+                <div
+                  class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:translate-y-[-8px] transition-transform duration-500 delay-75"
+                >
+                  <div
+                    class="w-2.5 h-2.5 rounded-full bg-blue-500 mb-4 shadow-[0_0_8px_rgba(59,130,246,0.5)]"
+                  >
+                  </div>
+                  <h4 class="text-white font-bold mb-1 text-xl">Thiscita</h4>
+                  <p class="text-gray-500 text-sm">Professional scheduling</p>
+                </div>
+                <div
+                  class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:translate-y-[-2px] transition-transform duration-500 delay-150 sm:col-span-2"
+                >
+                  <div
+                    class="w-2.5 h-2.5 rounded-full bg-orange-500 mb-4 shadow-[0_0_8px_rgba(249,115,22,0.5)]"
+                  >
+                  </div>
+                  <h4 class="text-white font-bold mb-1 text-xl">La Liguita</h4>
+                  <p class="text-gray-500 text-sm">
+                    Real-time sports management
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <div class="px-4 md:px-[10em]">
         <!-- Projects Section -->
         <div id="projects">
           <MyProjects />
@@ -210,18 +318,41 @@ const services = [
 
         <!-- Open Source CTA -->
         <section class="py-20 mt-10 border-t border-white/5 text-center">
-          <div class="bg-gradient-to-br from-violet-600/10 to-purple-600/10 border border-white/10 rounded-[2rem] p-10 md:p-16 backdrop-blur-sm">
-            <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Love this portfolio?</h3>
+          <div
+            class="bg-gradient-to-br from-violet-600/10 to-purple-600/10 border border-white/10 rounded-[2rem] p-10 md:p-16 backdrop-blur-sm"
+          >
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">
+              Love this portfolio?
+            </h3>
             <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-              This project is <span class="text-violet-400 font-semibold">Open Source</span>! Feel free to clone it, customize it, and use it as your own. Star it on GitHub if you find it useful.
+              This project is <span class="text-violet-400 font-semibold"
+                >Open Source</span
+              >! Feel free to clone it, customize it, and use it as your own.
+              Star it on GitHub if you find it useful.
             </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-              <a 
-                href="https://github.com/robertfrontend/portfolio-2024" 
+            <div
+              class="flex flex-col md:flex-row gap-4 justify-center items-center"
+            >
+              <a
+                href="https://github.com/robertfrontend/portfolio-2024"
                 target="_blank"
                 class="flex items-center gap-3 px-8 py-4 bg-white text-dark-purple font-bold rounded-full hover:bg-violet-100 transition-all text-lg shadow-xl shadow-white/5"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-star"
+                  ><polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon></svg
+                >
                 Star on GitHub
               </a>
             </div>
@@ -236,7 +367,9 @@ const services = [
 
     <!-- modal -->
     <dialog id="modalContact" class="modal">
-      <div class="modal-box bg-[#1a0b3b] border border-white/10 text-center shadow-2xl shadow-violet-500/20">
+      <div
+        class="modal-box bg-[#1a0b3b] border border-white/10 text-center shadow-2xl shadow-violet-500/20"
+      >
         <h3 class="font-bold text-white text-3xl mb-6">Let's Connect</h3>
 
         <ul class="space-y-4 mt-4">
@@ -280,7 +413,10 @@ const services = [
 
         <div class="modal-action">
           <form method="dialog">
-            <button class="px-6 py-2 rounded-lg text-gray-400 hover:text-white transition-colors">Close</button>
+            <button
+              class="px-6 py-2 rounded-lg text-gray-400 hover:text-white transition-colors"
+              >Close</button
+            >
           </form>
         </div>
       </div>
