@@ -2,224 +2,173 @@
 const projects = [
   {
     name: "Thiscita",
-    description: "Find local businesses, choose a service and book in seconds.",
+    description: "Multi-tenant booking platform enabling businesses to offer online appointment scheduling, calendar syncing, and automated reminders.",
     date: "2026",
-    img: "./work/thiscita-logo.png",
+    img: "./work/thiscita-logo.webp",
     link: "https://thiscita.com/",
+    tags: ["React", "TypeScript", "Tailwind CSS", "SaaS"],
   },
   {
     name: "La Liguita",
-    description: "App to manage amateur baseball leagues and statistics.",
+    description: "Comprehensive sports league management platform with live baseball scoreboards, player rosters, and team statistics tracking.",
     date: "2026",
-    img: "./work/laliguita-logo.png",
+    img: "./work/laliguita-logo.webp",
     link: "https://laliguita.vercel.app/",
+    tags: ["Astro", "TypeScript", "Tailwind", "Sports Tech"],
   },
   {
     name: "HolaGenio",
-    description: "AI tools platform for non-technical people.",
+    description: "Accessible AI productivity suite designed to empower non-technical entrepreneurs and operators with cutting-edge LLM tools.",
     date: "2025",
-    img: "./work/holagenio.png",
+    img: "./work/holagenio.webp",
     link: "https://holagenio.com/",
+    tags: ["Next.js", "AI APIs", "Fullstack", "SaaS"],
   },
   {
-    name: "Boston Data",
-    description: "Data Hub about the city of Boston.",
+    name: "Boston Data Hub",
+    description: "Public data visualization hub aggregating municipal datasets, civic analytics, and civic insights for the city of Boston.",
     date: "2025",
-    img: "",
+    img: "./work/boston-data.webp",
     link: "https://boston-data.vercel.app/",
+    tags: ["React", "Open Data", "Data Visualization"],
   },
   {
     name: "DiforVi",
-    description: "Diforvi: Digital Tools to Empower Your Business",
+    description: "Digital transformation platform and business empowerment suite providing high-converting marketing tools for local enterprises.",
     date: "2024",
-    img: "./work/diforvi.png",
+    img: "./work/diforvi.webp",
     link: "https://www.diforvi.com/",
+    tags: ["Web Apps", "E-commerce", "Branding"],
   },
   {
     name: "Menu DR",
-    description: "Application to create digital menus for restaurants.",
+    description: "Cloud-based digital menu solution for restaurants, supporting real-time catalog management and contactless customer ordering.",
     date: "2021",
-    img: "./work/menudr.png",
+    img: "./work/menudr.webp",
     link: "https://menudr.vercel.app/",
-  },
-];
-const customers = [
-  {
-    img: "./work/laliguita.png",
-    link: "https://laliguita.vercel.app/",
-  },
-  {
-    img: "./work/holagenio-web.png",
-    link: "https://holagenio.com/",
-  },
-  {
-    img: "./work/castle-cleaners.png",
-    type: "Website",
-    link: "https://castlecleanersofficial.com/",
-  },
-
-  {
-    img: "./work/sisters.png",
-    link: "https://apparent-copywriter-105211.framer.app/",
-  },
-
-  {
-    img: "./work/yovania.png",
-    link: "https://yovania-castillo.vercel.app/",
-  },
-  {
-    img: "./work/809-bar.png",
-    link: "https://809bar-and-restaurant.com/",
-  },
-  {
-    img: "./work/menudr-web.png",
-    link: "https://menudr.vercel.app/",
-  },
-  {
-    img: "./work/menudr-web-2.png",
-    link: "https://menudr.netlify.app/",
-  },
-  {
-    img: "./work/privitis.png",
-    link: "https://privitys.vercel.app/",
+    tags: ["Fullstack", "QR Menus", "Hospitality"],
   },
 ];
 ---
 
-<section>
-  <div class="py-2 text-center">
-    <h4 class="text-3xl my-8 font-bold text-white/90">Personal Projects</h4>
-    <div class="flex flex-col gap-6 md:gap-8 md:flex-row flex-wrap w-full">
-      {
-        projects.map((item) => (
-          <div
-            class="w-full flex flex-col gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 
-            hover:border-violet-500/50 hover:bg-white/10 transition-all duration-300 group
-            md:flex-row md:items-center"
-          >
-            <div class="w-full md:w-[240px] flex-shrink-0">
-              {item.img ? (
-                <img
-                  src={item.img || ""}
-                  class="w-full h-[80px] md:h-[100px] object-contain rounded-md filter grayscale group-hover:grayscale-0 transition-all"
-                  alt={item.name}
-                />
-              ) : (
-                <div class="h-[80px] md:h-[100px] flex items-center justify-center bg-violet-500/20 rounded-md">
-                  <h4 class="text-xl font-bold text-violet-300">{item.name}</h4>
-                </div>
-              )}
-            </div>
-            <div class="w-full flex flex-col justify-center md:items-start md:pl-6 text-left">
-              <h4 class="text-xl font-bold text-white group-hover:text-violet-300 transition-colors">
-                {item.name}
-              </h4>
-              <p class="text-gray-400 mt-1 line-clamp-2">{item.description}</p>
-              <div class="flex items-center justify-between w-full mt-4">
-                <span class="text-xs font-medium px-2 py-1 bg-white/10 rounded-full text-gray-300">
-                  {item.date}
-                </span>
-                <a
-                  href={item.link}
-                  target="_blank"
-                  class="text-violet-400 hover:text-violet-300 font-medium flex items-center gap-1 transition-colors"
-                >
-                  Visit Project{" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-external-link"
-                  >
-                    <>
-                      <path d="M15 3h6v6" />
-                      <path d="M10 14 21 3" />
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    </>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-
-    <div class="my-16">
-      <a
-        href="https://github.com/robertfrontend"
-        target="_blank"
-        class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 rounded-full hover:bg-white/5 transition-all text-lg"
-      >
-        View More on GitHub <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-github"
-          ><path
-            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-          ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
-        >
-      </a>
-    </div>
+<section id="projects" class="py-16 md:py-24">
+  <div class="text-center mb-16">
+    <span
+      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 text-xs font-semibold tracking-wider uppercase mb-4"
+    >
+      Selected Work
+    </span>
+    <h3 class="text-3xl md:text-5xl font-bold text-white tracking-tight">
+      Personal Products & Systems
+    </h3>
+    <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mt-3">
+      Independent SaaS tools and web platforms engineered for performance, accessibility, and intuitive UX.
+    </p>
   </div>
 
-  <hr class="border-white/10 mb-16" />
-
-  <div class="py-2 text-center">
-    <h4 class="text-3xl my-8 font-bold text-white/90">Customer Projects</h4>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {
-        customers.map((item) => (
-          <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-violet-500/50 transition-all duration-300">
-            <div class="aspect-video overflow-hidden">
+  <!-- Personal Projects Grid -->
+  <div class="flex flex-col gap-6 w-full">
+    {
+      projects.map((item) => (
+        <div
+          class="relative group overflow-hidden rounded-3xl bg-[#0d1322]/80 border border-white/[0.08] hover:border-violet-500/40 p-6 md:p-8 transition-all duration-300 shadow-xl shadow-black/40 flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center justify-between"
+        >
+          <!-- Image preview container -->
+          <div class="w-full md:w-[260px] h-[140px] md:h-[140px] flex-shrink-0 bg-black/40 border border-white/[0.06] rounded-2xl overflow-hidden flex items-center justify-center p-3 relative group-hover:border-violet-500/30 transition-colors">
+            {item.img ? (
               <img
                 src={item.img}
-                alt="Project image"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                loading="lazy"
+                class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                alt={item.name}
               />
-            </div>
-            <div class="p-4 flex justify-between items-center">
-              <span class="text-sm text-gray-400">Production Website</span>
+            ) : (
+              <div class="w-full h-full flex items-center justify-center bg-violet-500/10 rounded-xl">
+                <span class="text-xl font-bold text-violet-300">{item.name}</span>
+              </div>
+            )}
+          </div>
+
+          <!-- Content -->
+          <div class="flex-1 text-left w-full">
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <div class="flex items-center gap-3 flex-wrap">
+                <h4 class="text-xl md:text-2xl font-bold text-white group-hover:text-violet-300 transition-colors">
+                  {item.name}
+                </h4>
+                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/10 text-gray-300">
+                  {item.date}
+                </span>
+              </div>
+
               <a
                 href={item.link}
                 target="_blank"
-                class="text-violet-400 hover:text-violet-300 transition-colors"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 hover:bg-violet-600 border border-white/10 hover:border-violet-500 text-white text-xs md:text-sm font-semibold transition-all group/btn"
               >
+                <span>Visit Live</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
+                  width="14"
+                  height="14"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-arrow-up-right"
+                  class="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"
                 >
-                  <>
-                    <path d="M7 7h10v10" />
-                    <path d="M7 17 17 7" />
-                  </>
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
                 </svg>
               </a>
             </div>
+
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-4">
+              {item.description}
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2">
+              {item.tags.map((tag) => (
+                <span class="text-xs px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/[0.06] text-gray-400 font-medium">
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
-        ))
-      }
-    </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="my-16 text-center">
+    <a
+      href="https://github.com/robertfrontend"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium text-sm md:text-base transition-all group"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="text-gray-400 group-hover:text-white transition-colors"
+      >
+        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+        <path d="M9 18c-4.51 2-5-2-7-2"></path>
+      </svg>
+      <span>Explore more open source on GitHub</span>
+      <span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-gray-400 group-hover:text-white">★</span>
+    </a>
   </div>
 </section>
+

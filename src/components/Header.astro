@@ -1,16 +1,119 @@
-<header class="bg-transparent py-4 md:py-8 w-full">
-  <div class="container mx-auto flex justify-between items-center px-4">
-    <h1 class="text-xl font-normal text-white">
-      <a href="/">Robertfrontend</a>
-    </h1>
-    <nav class="flex space-x-4">
+---
+interface Props {
+  lang?: "en" | "es";
+}
+
+const { lang: propLang } = Astro.props;
+const pathname = Astro.url.pathname;
+const isEs = propLang === "es" || pathname.startsWith("/es") || pathname.includes("/product-studio/es");
+
+// Target URLs for language switcher:
+let enUrl = "/";
+let esUrl = "/es";
+
+if (pathname.includes("/product-studio")) {
+  enUrl = "/product-studio";
+  esUrl = "/product-studio/es";
+} else if (pathname.includes("/projects")) {
+  enUrl = "/projects";
+  esUrl = "/es/projects";
+}
+
+const t = {
+  overview: isEs ? "Resumen" : "Overview",
+  projects: isEs ? "Proyectos" : "Projects",
+  stack: isEs ? "Stack" : "Stack",
+  services: isEs ? "Servicios" : "Services",
+  studio: "Product Studio",
+  talk: isEs ? "Hablemos" : "Let's Talk",
+  homeLink: isEs ? "/es" : "/",
+  bentoLink: isEs ? "/es#bento" : "/#bento",
+  skillsLink: isEs ? "/es#skills" : "/#skills",
+  servicesLink: isEs ? "/es#services" : "/#services",
+  studioLink: isEs ? "/product-studio/es" : "/product-studio",
+  projectsLink: isEs ? "/projects" : "/projects",
+};
+---
+
+<header class="fixed top-3 sm:top-5 inset-x-0 z-50 w-full px-4 pointer-events-none transition-all duration-300">
+  <div
+    class="max-w-4xl mx-auto flex items-center justify-between px-3 sm:px-6 py-2 sm:py-2.5 rounded-full bg-[#0a0f1d]/85 border border-white/10 backdrop-blur-xl shadow-2xl shadow-black/60 pointer-events-auto transition-all duration-300 hover:border-white/20"
+  >
+    <a href={t.homeLink} class="flex items-center gap-2 sm:gap-2.5 group shrink-0">
+      <span class="relative flex h-2.5 w-2.5">
+        <span
+          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+        ></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+      </span>
+      <span class="font-bold text-white text-sm sm:text-base tracking-tight transition-colors">
+        robert<span class="text-[#5e17eb] font-extrabold group-hover:brightness-125 transition-all">frontend</span>
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm">
       <a
-        href="/#services"
-        class="text-white hover:text-violet-400 underline decoration-violet-500/30 underline-offset-4">Services</a
+        href={t.bentoLink}
+        class="text-gray-300 hover:text-white transition-colors font-medium"
+        >{t.overview}</a
       >
-      <a href="/#projects" class="text-white hover:text-violet-400 underline decoration-violet-500/30 underline-offset-4"
-        >Projects</a
+      <a
+        href={t.projectsLink}
+        class="text-gray-300 hover:text-white transition-colors font-medium"
+        >{t.projects}</a
       >
+      <a
+        href={t.skillsLink}
+        class="text-gray-300 hover:text-white transition-colors font-medium"
+        >{t.stack}</a
+      >
+      <a
+        href={t.servicesLink}
+        class="text-gray-300 hover:text-white transition-colors font-medium"
+        >{t.services}</a
+      >
+      <a
+        href={t.studioLink}
+        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:bg-emerald-500/20 transition-all font-semibold text-xs"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        {t.studio}
+      </a>
     </nav>
+
+    <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+      <!-- Language Switcher Pill -->
+      <div class="inline-flex items-center p-0.5 rounded-full bg-white/[0.06] border border-white/10 text-xs font-semibold">
+        <a
+          href={enUrl}
+          class={`px-2 py-0.5 rounded-full transition-all text-[11px] sm:text-xs ${!isEs ? "bg-violet-600 text-white shadow-sm shadow-violet-600/50 font-bold" : "text-gray-400 hover:text-white"}`}
+          aria-label="English language"
+        >
+          EN
+        </a>
+        <a
+          href={esUrl}
+          class={`px-2 py-0.5 rounded-full transition-all text-[11px] sm:text-xs ${isEs ? "bg-violet-600 text-white shadow-sm shadow-violet-600/50 font-bold" : "text-gray-400 hover:text-white"}`}
+          aria-label="Idioma español"
+        >
+          ES
+        </a>
+      </div>
+
+      <a
+        href={t.studioLink}
+        class="md:hidden inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-semibold text-xs"
+      >
+        Studio
+      </a>
+      <button
+        type="button"
+        class="contact-trigger px-3.5 sm:px-4 py-1.5 rounded-full bg-violet-600 hover:bg-violet-500 text-white text-xs sm:text-sm font-semibold transition-all shadow-md shadow-violet-600/30 hover:shadow-violet-600/50 cursor-pointer whitespace-nowrap"
+      >
+        {t.talk}
+      </button>
+    </div>
   </div>
 </header>
+
+

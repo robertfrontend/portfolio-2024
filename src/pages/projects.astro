@@ -1,25 +1,21 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import MyProjects from "../components/MyProjects.astro";
 import Header from "../components/Header.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <title>Robert | My Projects</title>
-  </head>
-  <body class="text-white font-sans bg-dark-purple relative overflow-x-hidden">
+<Layout
+  title="Robert Romero — Projects Archive"
+  description="Explore the portfolio of web applications, platforms, and digital products built by Robert Romero Medina."
+>
+  <div class="relative overflow-x-clip min-h-screen">
     <!-- Glow effects -->
     <div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-600/10 blur-[120px] rounded-full -z-10"></div>
     <div class="absolute bottom-[10%] left-[-10%] w-[30%] h-[30%] bg-violet-500/5 blur-[100px] rounded-full -z-10"></div>
 
-    <main class="mx-auto w-full lg:w-[80%] min-h-[100vh] mb-10">
-      <Header />
+    <Header />
+
+    <main class="mx-auto w-full lg:w-[80%] min-h-[100vh] mb-10 pt-20 sm:pt-24">
       <section id="projects" class="py-12">
         <div class="container mx-auto px-4">
           <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-violet-400 mb-6">My Projects</h2>
@@ -35,5 +31,5 @@ import Header from "../components/Header.astro";
         </div>
       </section>
     </main>
-  </body>
-</html>
+  </div>
+</Layout>
