@@ -1,0 +1,88 @@
+---
+interface Props {
+  lang?: "en" | "es";
+}
+
+const { lang = "en" } = Astro.props;
+const isEs = lang === "es";
+
+const channels = [
+  {
+    label: isEs ? "Correo" : "Email",
+    value: "romerofront@gmail.com",
+    href: "mailto:romerofront@gmail.com",
+    external: false,
+  },
+  {
+    label: "WhatsApp",
+    value: "+1 (857) 397-5959",
+    href: "https://wa.me/18573975959",
+    external: true,
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/robertfrontend",
+    href: "https://www.linkedin.com/in/robertfrontend/",
+    external: true,
+  },
+  {
+    label: "Instagram",
+    value: "@robertfrontend",
+    href: "https://www.instagram.com/robertfrontend",
+    external: true,
+  },
+  {
+    label: "X",
+    value: "@robertfrontend",
+    href: "https://x.com/robertfrontend",
+    external: true,
+  },
+  {
+    label: "GitHub",
+    value: "github.com/robertfrontend",
+    href: "https://github.com/robertfrontend",
+    external: true,
+  },
+  {
+    label: "CV",
+    value: isEs ? "Descargar PDF" : "Download PDF",
+    href: "/RobertCV2026.pdf",
+    external: false,
+    download: "Robert_Romero_CV.pdf",
+  },
+];
+---
+
+<section id="contact" class="scroll-mt-24 mt-16 border-t border-white/10 pt-14 sm:mt-20 sm:pt-16">
+  <h2 class="font-display text-2xl font-medium tracking-tight text-white sm:text-3xl">
+    {isEs ? "Contacto" : "Contact"}
+  </h2>
+  <p class="mt-4 max-w-[38rem] text-base leading-relaxed text-[#e4e6ee] sm:text-lg">
+    {
+      isEs
+        ? "La forma más directa es el correo o WhatsApp."
+        : "Email or WhatsApp is the fastest way to reach me."
+    }
+  </p>
+  <ul class="mt-8 border-t border-white/10">
+    {
+      channels.map((channel) => (
+        <li class="border-b border-white/10">
+          <a
+            href={channel.href}
+            class="flex flex-col gap-1 py-4 text-white hover:text-[#ddd6fe] sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 sm:py-[1.125rem]"
+            {...(channel.external
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
+            {...(channel.download ? { download: channel.download } : {})}
+          >
+            <span class="font-medium">{channel.label}</span>
+            <span class="break-all text-[15px] leading-relaxed text-[#c5cad6] sm:text-right">
+              {channel.value}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

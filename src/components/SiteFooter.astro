@@ -1,0 +1,40 @@
+---
+interface Props {
+  lang?: "en" | "es";
+}
+
+const { lang = "en" } = Astro.props;
+const isEs = lang === "es";
+
+const links = [
+  {
+    label: isEs ? "Proyectos" : "Projects",
+    href: "/projects",
+  },
+  {
+    label: "Product Studio",
+    href: isEs ? "/product-studio/es" : "/product-studio",
+  },
+  {
+    label: isEs ? "Enlaces" : "Links",
+    href: isEs ? "/links" : "/links/en",
+  },
+];
+---
+
+<footer class="mt-16 border-t border-white/10 sm:mt-20">
+  <div
+    class="mx-auto flex max-w-3xl flex-col gap-4 px-5 py-8 text-sm leading-relaxed text-[#c5cad6] sm:flex-row sm:items-center sm:justify-between"
+  >
+    <p>&copy; 2026 Robert Romero Medina</p>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2" aria-label={isEs ? "Pie de página" : "Footer"}>
+      {
+        links.map((link) => (
+          <a href={link.href} class="text-[#c5cad6] hover:text-white">
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</footer>

@@ -1,0 +1,61 @@
+---
+import { studioProducts } from "../data/studio";
+
+interface Props {
+  lang?: "en" | "es";
+}
+
+const { lang = "en" } = Astro.props;
+const isEs = lang === "es";
+---
+
+<section id="studio" class="scroll-mt-24 mt-16 border-t border-white/10 pt-14 sm:mt-20 sm:pt-16">
+  <h2 class="font-display text-2xl font-medium tracking-tight text-white sm:text-3xl">
+    Product Studio
+  </h2>
+  <p class="mt-4 max-w-[38rem] text-base leading-relaxed text-[#e4e6ee] sm:text-lg">
+    {
+      isEs
+        ? "Herramientas de software independientes y plataformas SaaS."
+        : "Independent software tools and SaaS platforms."
+    }
+  </p>
+  <ul class="mt-8 border-t border-white/10">
+    {
+      studioProducts.map((product) => (
+        <li class="border-b border-white/10">
+          {product.url ? (
+            <a
+              href={product.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block py-5 sm:py-6"
+            >
+              <span class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <span class="font-display text-lg font-medium tracking-tight text-white group-hover:text-[#ddd6fe] sm:text-xl">
+                  {product.name}
+                </span>
+                <span class="text-sm text-[#c5cad6]">{product.status}</span>
+              </span>
+              <span class="mt-2 block text-[15px] leading-relaxed text-[#e4e6ee] sm:text-base">
+                {isEs ? product.description.es : product.description.en}
+              </span>
+            </a>
+          ) : (
+            <div class="block py-5 sm:py-6">
+              <span class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <span class="font-display text-lg font-medium tracking-tight text-white sm:text-xl">
+                  {product.name}
+                </span>
+                <span class="text-sm text-[#c5cad6]">{product.status}</span>
+              </span>
+              <span class="mt-2 block text-[15px] leading-relaxed text-[#e4e6ee] sm:text-base">
+                {isEs ? product.description.es : product.description.en}
+              </span>
+            </div>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</section>

@@ -101,13 +101,13 @@
 ## 👨‍💻 Author
 
 **Robert Romero Medina**  
-*Fullstack Developer based in Boston, MA 🇩🇴*
+*Software Developer & Product Builder based in Boston, MA 🇩🇴*
 
 - **Website:** [robertfrontend.com](https://www.robertfrontend.com)
 - **LinkedIn:** [@robertfrontend](https://linkedin.com/in/robertfrontend)
 - **GitHub:** [@robertfrontend](https://github.com/robertfrontend)
 - **Instagram:** [@robertfrontend](https://instagram.com/robertfrontend)
-- **Email:** [robert@robertfrontend.com](mailto:robert@robertfrontend.com)
+- **Email:** [romerofront@gmail.com](mailto:romerofront@gmail.com)
 
 ---
 
