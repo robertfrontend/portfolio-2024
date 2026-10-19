@@ -30,14 +30,14 @@ export const projects: Project[] = [
   {
     name: "La Liguita",
     description: {
-      en: "Sports league manager with live baseball scoreboards, rosters, and team statistics.",
-      es: "Gestión de ligas deportivas, con marcadores de béisbol en vivo, plantillas y estadísticas.",
+      en: "Sports league manager with live scoreboards, rosters, and team statistics.",
+      es: "Gestión de ligas deportivas, con marcadores en vivo, plantillas y estadísticas.",
     },
     date: "2026",
     img: "/work/laliguita-home.webp",
     alt: {
-      en: "Homepage of La Liguita, a platform for sports leagues and tournaments",
-      es: "Página de inicio de La Liguita, una plataforma de ligas y torneos deportivos",
+      en: "La Liguita amateur sports league platform",
+      es: "Plataforma de La Liguita para ligas deportivas amateur",
     },
     link: "https://laliguita.vercel.app/",
     tags: ["Astro", "TypeScript", "Tailwind", "Sports Tech"],
