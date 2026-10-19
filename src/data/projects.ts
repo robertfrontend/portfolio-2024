@@ -89,20 +89,4 @@ export const projects: Project[] = [
     tags: ["React", "Open Data", "Data Visualization"],
     featured: false,
   },
-  {
-    name: "DiforVi",
-    description: {
-      en: "Marketing site and tools for a local business.",
-      es: "Sitio y herramientas de marketing para un negocio local.",
-    },
-    date: "2024",
-    img: "/work/diforvi-home.webp",
-    alt: {
-      en: "DiforVi logo on a neutral tile. The live site could not be captured.",
-      es: "Logotipo de DiforVi sobre un fondo neutro. No se pudo capturar el sitio en vivo.",
-    },
-    link: "https://www.diforvi.com/",
-    tags: ["Web Apps", "E-commerce", "Branding"],
-    featured: false,
-  },
 ];
