@@ -36,8 +36,8 @@ export const projects: Project[] = [
     date: "2026",
     img: "/work/laliguita-home.webp",
     alt: {
-      en: "Homepage of La Liguita, a platform for sports leagues and tournaments",
-      es: "Página de inicio de La Liguita, una plataforma de ligas y torneos deportivos",
+      en: "Homepage of La Liguita, a baseball league platform with live scores and tournaments",
+      es: "Página de inicio de La Liguita, una plataforma de ligas de béisbol con marcadores y torneos",
     },
     link: "https://laliguita.vercel.app/",
     tags: ["Astro", "TypeScript", "Tailwind", "Sports Tech"],
