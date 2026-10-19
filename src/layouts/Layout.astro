@@ -10,10 +10,40 @@ interface Props {
 const {
   title,
   description = "Robert Romero Medina — Fullstack Developer with 6+ years of experience (since 2020) building modern, responsive web applications and SaaS products. Based in Boston, MA.",
-  image = "/full.jpg",
+  image = "/og.jpg",
   hideFooter = false,
   lang = "en",
 } = Astro.props;
+
+const site = Astro.site ?? new URL("https://www.robertfrontend.com");
+
+function absolutePageUrl(pathname: string) {
+  const url = new URL(pathname, site);
+  if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+    url.pathname = url.pathname.replace(/\/+$/, "");
+  }
+  return url;
+}
+
+const canonicalURL = absolutePageUrl(Astro.url.pathname);
+const socialImage = new URL(image, site);
+const englishURL = new URL("/", site);
+const spanishURL = new URL("/es", site);
+const isLanguageHome = canonicalURL.pathname === "/" || canonicalURL.pathname === "/es";
+
+const personJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Robert Romero",
+  url: englishURL.href,
+  jobTitle: "Fullstack Developer & Product Builder",
+  sameAs: [
+    "https://x.com/robertfrontend",
+    "https://github.com/robertfrontend",
+    "https://www.linkedin.com/in/robertfrontend/",
+    "https://www.instagram.com/robertfrontend",
+  ],
+}).replace(/</g, "\\u003c");
 ---
 
 <!doctype html>
@@ -37,20 +67,39 @@ const {
 
     <title>{title}</title>
 
-    <meta
-      name="author"
-      content="Robert Romero Medina, Fullstack Developer with 6+ years specializing in scalable web applications and SaaS products."
-    />
+    <link rel="canonical" href={canonicalURL} />
+    {
+      isLanguageHome && (
+        <>
+          <link rel="alternate" hreflang="en" href={englishURL} />
+          <link rel="alternate" hreflang="es" href={spanishURL} />
+          <link rel="alternate" hreflang="x-default" href={englishURL} />
+        </>
+      )
+    }
+
+    <meta name="author" content="Robert Romero" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
-    <meta property="og:image" content={image} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImage} />
+    {
+      image === "/og.jpg" && (
+        <>
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+        </>
+      )
+    }
+    <meta property="og:image:alt" content="Robert Romero" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={socialImage} />
+
+    <script type="application/ld+json" set:html={personJson} />
   </head>
   <body>
     <slot />
