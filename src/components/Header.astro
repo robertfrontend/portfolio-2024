@@ -21,19 +21,19 @@ if (pathname.includes("/product-studio")) {
 
 const onSpanishHome = pathname === "/es" || pathname === "/es/";
 const onEnglishHome = pathname === "/";
+const onProjects = pathname === "/projects" || pathname.startsWith("/projects/");
 
 const homeHref = isEs ? "/es" : "/";
 const onStudioPage = pathname.includes("/product-studio");
 const workHref = isEs ? (onSpanishHome ? "#work" : "/es#work") : onEnglishHome ? "#work" : "/projects";
 const studioHref =
   onSpanishHome || onEnglishHome ? "#studio" : isEs ? "/es#studio" : "/#studio";
-const contactHref = isEs
-  ? onSpanishHome
+const contactHref =
+  onEnglishHome || onSpanishHome || onProjects
     ? "#contact"
-    : "/es#contact"
-  : onEnglishHome
-    ? "#contact"
-    : "/#contact";
+    : isEs
+      ? "/es#contact"
+      : "/#contact";
 
 const langHref = isEs ? enUrl : esUrl;
 const langLabel = isEs ? "EN" : "ES";

@@ -1,10 +1,12 @@
 export type Project = {
   name: string;
   description: { en: string; es: string };
-  date: string;
+  date?: string;
+  status?: { en: string; es: string };
   img: string;
-  link: string;
-  tags: string[];
+  alt: { en: string; es: string };
+  link?: string;
+  tags?: string[];
   featured: boolean;
 };
 
@@ -16,7 +18,11 @@ export const projects: Project[] = [
       es: "Plataforma de reservas con citas en línea, calendario sincronizado y recordatorios.",
     },
     date: "2026",
-    img: "/work/thiscita-logo.webp",
+    img: "/work/thiscita-home.webp",
+    alt: {
+      en: "Homepage of Thiscita, a booking site for local service businesses",
+      es: "Página de inicio de Thiscita, un sitio de reservas para negocios de servicios",
+    },
     link: "https://thiscita.com/",
     tags: ["React", "TypeScript", "Tailwind CSS", "SaaS"],
     featured: true,
@@ -28,21 +34,13 @@ export const projects: Project[] = [
       es: "Gestión de ligas deportivas, con marcadores de béisbol en vivo, plantillas y estadísticas.",
     },
     date: "2026",
-    img: "/work/laliguita-logo.webp",
+    img: "/work/laliguita-home.webp",
+    alt: {
+      en: "Homepage of La Liguita, a platform for sports leagues and tournaments",
+      es: "Página de inicio de La Liguita, una plataforma de ligas y torneos deportivos",
+    },
     link: "https://laliguita.vercel.app/",
     tags: ["Astro", "TypeScript", "Tailwind", "Sports Tech"],
-    featured: true,
-  },
-  {
-    name: "HolaGenio",
-    description: {
-      en: "AI productivity tools for entrepreneurs and operators who are not engineers.",
-      es: "Herramientas de productividad con IA para emprendedores y operadores que no son ingenieros.",
-    },
-    date: "2025",
-    img: "/work/holagenio.webp",
-    link: "https://holagenio.com/",
-    tags: ["Next.js", "AI APIs", "Fullstack", "SaaS"],
     featured: true,
   },
   {
@@ -52,9 +50,27 @@ export const projects: Project[] = [
       es: "Menús digitales para restaurantes, con catálogo en vivo y pedidos sin contacto.",
     },
     date: "2021",
-    img: "/work/menudr.webp",
-    link: "https://menudr.vercel.app/",
+    img: "/work/menudrapp-home.webp",
+    alt: {
+      en: "Homepage of MenuDrapp, a digital catalog and menu product",
+      es: "Página de inicio de MenuDrapp, un producto de menús y catálogos digitales",
+    },
+    link: "https://menudrapp.com",
     tags: ["Fullstack", "QR Menus", "Hospitality"],
+    featured: true,
+  },
+  {
+    name: "Your Lucky Lottery",
+    description: {
+      en: "Custom lottery platform built for a client",
+      es: "Plataforma de lotería a medida desarrollada para un cliente",
+    },
+    status: { en: "Coming soon", es: "Próximamente" },
+    img: "/work/your-lucky-lottery.webp",
+    alt: {
+      en: "Placeholder for Your Lucky Lottery, a client project that is coming soon",
+      es: "Marcador de posición de Your Lucky Lottery, un proyecto para un cliente que estará disponible próximamente",
+    },
     featured: true,
   },
   {
@@ -64,21 +80,13 @@ export const projects: Project[] = [
       es: "Datos públicos y gráficas cívicas de la ciudad de Boston.",
     },
     date: "2025",
-    img: "/work/boston-data.webp",
+    img: "/work/boston-data-home.webp",
+    alt: {
+      en: "Homepage of Boston Data Hub, a guide to Boston city services",
+      es: "Página de inicio de Boston Data Hub, una guía de servicios de la ciudad de Boston",
+    },
     link: "https://boston-data.vercel.app/",
     tags: ["React", "Open Data", "Data Visualization"],
-    featured: false,
-  },
-  {
-    name: "DiforVi",
-    description: {
-      en: "Marketing site and tools for a local business.",
-      es: "Sitio y herramientas de marketing para un negocio local.",
-    },
-    date: "2024",
-    img: "/work/diforvi.webp",
-    link: "https://www.diforvi.com/",
-    tags: ["Web Apps", "E-commerce", "Branding"],
     featured: false,
   },
 ];
