@@ -13,23 +13,23 @@ const list = featuredOnly ? projects.filter((project) => project.featured) : pro
 
 <ul class="mt-8 border-t border-white/10">
   {
-    list.map((project) => (
-      <li class="border-b border-white/10">
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-4 py-5 sm:grid-cols-[5.5rem_minmax(0,1fr)] sm:gap-5 sm:py-6"
-        >
-          <span class="flex h-[4.5rem] w-[4.5rem] items-center justify-center overflow-hidden rounded-md bg-white/[0.06] sm:h-[5.5rem] sm:w-[5.5rem]">
+    list.map((project) => {
+      const label = project.status
+        ? isEs
+          ? project.status.es
+          : project.status.en
+        : project.date;
+      const body = (
+        <>
+          <span class="block overflow-hidden rounded-md bg-[#10141c]">
             <img
               src={project.img}
-              alt=""
-              width="88"
-              height="88"
+              alt={isEs ? project.alt.es : project.alt.en}
+              width="1440"
+              height="900"
               loading="lazy"
               decoding="async"
-              class="h-full w-full object-contain p-2"
+              class="aspect-[16/10] w-full object-cover"
             />
           </span>
           <span class="min-w-0">
@@ -37,17 +37,37 @@ const list = featuredOnly ? projects.filter((project) => project.featured) : pro
               <span class="font-display text-lg font-medium tracking-tight text-white group-hover:text-[#ddd6fe] sm:text-xl">
                 {project.name}
               </span>
-              <span class="text-sm text-[#c5cad6]">{project.date}</span>
+              {label && <span class="text-sm text-[#c5cad6]">{label}</span>}
             </span>
             <span class="mt-2 block text-[15px] leading-relaxed text-[#e4e6ee] sm:text-base">
               {isEs ? project.description.es : project.description.en}
             </span>
-            <span class="mt-2 block text-sm leading-relaxed text-[#c5cad6]">
-              {project.tags.join(", ")}
-            </span>
+            {project.tags && project.tags.length > 0 && (
+              <span class="mt-2 block text-sm leading-relaxed text-[#c5cad6]">
+                {project.tags.join(", ")}
+              </span>
+            )}
           </span>
-        </a>
-      </li>
-    ))
+        </>
+      );
+      const rowClass =
+        "grid grid-cols-1 items-start gap-4 py-5 sm:grid-cols-[13.75rem_minmax(0,1fr)] sm:gap-5 sm:py-6";
+      return (
+        <li class="border-b border-white/10">
+          {project.link ? (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class:list={["group", rowClass]}
+            >
+              {body}
+            </a>
+          ) : (
+            <div class={rowClass}>{body}</div>
+          )}
+        </li>
+      );
+    })
   }
 </ul>
