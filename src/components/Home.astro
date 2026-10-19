@@ -1,6 +1,7 @@
 ---
 import Header from "./Header.astro";
 import ProjectList from "./ProjectList.astro";
+import StudioSection from "./StudioSection.astro";
 import ContactSection from "./ContactSection.astro";
 import SiteFooter from "./SiteFooter.astro";
 
@@ -34,8 +35,8 @@ const isEs = lang === "es";
       <p class="mt-8 max-w-[38rem] text-lg leading-relaxed text-[#e4e6ee] sm:text-xl">
         {
           isEs
-            ? "Videógrafo y desarrollador frontend. Construyo interfaces con React, Next.js, Vue y Nuxt."
-            : "Videographer and frontend developer. I build interfaces with React, Next.js, Vue, and Nuxt."
+            ? "Desarrollador de software y creador de productos. Construyo aplicaciones web y productos SaaS con React, Next.js, Vue y Nuxt."
+            : "Software developer and product builder. I build web apps and SaaS products with React, Next.js, Vue, and Nuxt."
         }
       </p>
     </section>
@@ -54,6 +55,8 @@ const isEs = lang === "es";
         </a>
       </p>
     </section>
+
+    <StudioSection lang={lang} />
 
     <ContactSection lang={lang} />
   </main>

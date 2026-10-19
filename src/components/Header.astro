@@ -23,7 +23,10 @@ const onSpanishHome = pathname === "/es" || pathname === "/es/";
 const onEnglishHome = pathname === "/";
 
 const homeHref = isEs ? "/es" : "/";
+const onStudioPage = pathname.includes("/product-studio");
 const workHref = isEs ? (onSpanishHome ? "#work" : "/es#work") : onEnglishHome ? "#work" : "/projects";
+const studioHref =
+  onSpanishHome || onEnglishHome ? "#studio" : isEs ? "/es#studio" : "/#studio";
 const contactHref = isEs
   ? onSpanishHome
     ? "#contact"
@@ -39,23 +42,31 @@ const langAria = isEs ? "English language" : "Idioma español";
 const workLabel = isEs ? "Proyectos" : "Work";
 const contactLabel = isEs ? "Contacto" : "Contact";
 const workCurrent = pathname.includes("/projects") && !workHref.startsWith("#");
+const studioCurrent = onStudioPage;
 ---
 
 <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#070a13]/95 backdrop-blur-md">
-  <div class="mx-auto flex max-w-3xl items-center gap-3 px-5 py-3">
+  <div class="mx-auto flex max-w-3xl items-center gap-2 px-4 py-3 sm:gap-3 sm:px-5">
     <a
       href={homeHref}
       class="shrink-0 font-display text-sm font-medium tracking-tight text-white sm:text-base"
     >
       robertfrontend
     </a>
-    <nav class="ml-auto flex items-center gap-x-3 text-[13px] sm:gap-x-5 sm:text-sm" aria-label={isEs ? "Principal" : "Primary"}>
+    <nav class="ml-auto flex items-center gap-x-2 text-[13px] sm:gap-x-5 sm:text-sm" aria-label={isEs ? "Principal" : "Primary"}>
       <a
         href={workHref}
         class="text-[#c5cad6] hover:text-white"
         aria-current={workCurrent ? "page" : undefined}
       >
         {workLabel}
+      </a>
+      <a
+        href={onStudioPage ? (isEs ? "/product-studio/es" : "/product-studio") : studioHref}
+        class="text-[#c5cad6] hover:text-white"
+        aria-current={studioCurrent ? "page" : undefined}
+      >
+        Studio
       </a>
       <a href={contactHref} class="text-[#c5cad6] hover:text-white">
         {contactLabel}
