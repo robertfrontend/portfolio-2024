@@ -107,13 +107,18 @@ const personJson = JSON.stringify({
   </body>
 </html>
 <style is:global>
-  html {
+  html:root {
     font-family: "Plus Jakarta Sans", sans-serif;
-    background: #0f022e;
-    color: white;
+    background-color: #070a13;
+    color: #f4f4f5;
+    color-scheme: dark;
   }
   body {
     overflow-x: hidden;
+  }
+  :focus-visible {
+    outline: 2px solid #c3b2fd;
+    outline-offset: 3px;
   }
 </style>
 

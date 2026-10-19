@@ -1,0 +1,61 @@
+---
+import Header from "./Header.astro";
+import ProjectList from "./ProjectList.astro";
+import ContactSection from "./ContactSection.astro";
+import SiteFooter from "./SiteFooter.astro";
+
+interface Props {
+  lang?: "en" | "es";
+}
+
+const { lang = "en" } = Astro.props;
+const isEs = lang === "es";
+---
+
+<div class="min-h-screen bg-[#070a13] text-[#f4f4f5]">
+  <Header lang={lang} />
+  <main class="mx-auto max-w-3xl px-5 pb-4 pt-20 sm:pt-24">
+    <section class="pb-14 pt-6 sm:pb-16 sm:pt-10">
+      <h1 class="font-display text-4xl font-medium leading-[1.05] tracking-tight text-white sm:text-6xl">
+        Robert Romero
+      </h1>
+      <div class="mt-6 flex items-center gap-4">
+        <img
+          src="/full.webp"
+          class="h-14 w-14 rounded-full object-cover sm:h-16 sm:w-16"
+          alt="Robert Romero Medina"
+          width="64"
+          height="64"
+          loading="eager"
+          decoding="async"
+        />
+        <p class="text-base text-[#c5cad6]">Boston, MA</p>
+      </div>
+      <p class="mt-8 max-w-[38rem] text-lg leading-relaxed text-[#e4e6ee] sm:text-xl">
+        {
+          isEs
+            ? "Videógrafo y desarrollador frontend. Construyo interfaces con React, Next.js, Vue y Nuxt."
+            : "Videographer and frontend developer. I build interfaces with React, Next.js, Vue, and Nuxt."
+        }
+      </p>
+    </section>
+
+    <section id="work" class="scroll-mt-24 border-t border-white/10 pt-14 sm:pt-16">
+      <h2 class="font-display text-2xl font-medium tracking-tight text-white sm:text-3xl">
+        {isEs ? "Proyectos destacados" : "Featured projects"}
+      </h2>
+      <ProjectList lang={lang} featuredOnly={true} />
+      <p class="mt-8">
+        <a
+          href="/projects"
+          class="text-base text-[#ddd6fe] underline decoration-white/25 underline-offset-4 hover:decoration-[#ddd6fe]"
+        >
+          {isEs ? "Todos los proyectos" : "All projects"}
+        </a>
+      </p>
+    </section>
+
+    <ContactSection lang={lang} />
+  </main>
+  <SiteFooter lang={lang} />
+</div>

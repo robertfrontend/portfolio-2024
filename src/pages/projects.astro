@@ -1,36 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MyProjects from "../components/MyProjects.astro";
 import Header from "../components/Header.astro";
+import ProjectList from "../components/ProjectList.astro";
+import ContactSection from "../components/ContactSection.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 ---
 
 <Layout
   title="Robert Romero — Projects Archive"
   description="Explore the portfolio of web applications, platforms, and digital products built by Robert Romero Medina."
+  hideFooter={true}
 >
-  <div class="text-white font-sans bg-[#070a13] overflow-x-clip relative min-h-screen selection:bg-violet-600/30">
-    <!-- Glow effects -->
-    <div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-600/10 blur-[120px] rounded-full -z-10"></div>
-    <div class="absolute bottom-[10%] left-[-10%] w-[30%] h-[30%] bg-violet-500/5 blur-[100px] rounded-full -z-10"></div>
-
-    <Header />
-
-    <main class="mx-auto w-full lg:w-[80%] min-h-[100vh] mb-10 pt-20 sm:pt-24">
-      <section id="projects" class="py-12">
-        <div class="container mx-auto px-4">
-          <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-violet-400 mb-6">My Projects</h2>
-          <p class="text-lg font-light text-gray-400 max-w-3xl leading-relaxed">
-            Here are some of the projects I have worked on. Each project
-            showcases my skills and experience in web development, including
-            front-end and back-end technologies. I am passionate about creating
-            efficient and scalable solutions.
-          </p>
-          <div class="mt-12">
-            <MyProjects />
-          </div>
-        </div>
+  <div class="min-h-screen bg-[#070a13] text-[#f4f4f5]">
+    <Header lang="en" />
+    <main class="mx-auto max-w-3xl px-5 pb-4 pt-20 sm:pt-24">
+      <section id="work" class="scroll-mt-24 pb-2 pt-6 sm:pt-10">
+        <h1 class="font-display text-4xl font-medium leading-[1.05] tracking-tight text-white sm:text-5xl">
+          Projects
+        </h1>
+        <p class="mt-5 max-w-[38rem] text-lg leading-relaxed text-[#e4e6ee]">
+          Web applications and platforms I have shipped, including the ones featured on the home page.
+        </p>
+        <ProjectList lang="en" />
       </section>
+      <ContactSection lang="en" />
     </main>
+    <SiteFooter lang="en" />
   </div>
 </Layout>
 

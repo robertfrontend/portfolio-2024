@@ -1,0 +1,53 @@
+---
+import { projects } from "../data/projects";
+
+interface Props {
+  lang?: "en" | "es";
+  featuredOnly?: boolean;
+}
+
+const { lang = "en", featuredOnly = false } = Astro.props;
+const isEs = lang === "es";
+const list = featuredOnly ? projects.filter((project) => project.featured) : projects;
+---
+
+<ul class="mt-8 border-t border-white/10">
+  {
+    list.map((project) => (
+      <li class="border-b border-white/10">
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-4 py-5 sm:grid-cols-[5.5rem_minmax(0,1fr)] sm:gap-5 sm:py-6"
+        >
+          <span class="flex h-[4.5rem] w-[4.5rem] items-center justify-center overflow-hidden rounded-md bg-white/[0.06] sm:h-[5.5rem] sm:w-[5.5rem]">
+            <img
+              src={project.img}
+              alt=""
+              width="88"
+              height="88"
+              loading="lazy"
+              decoding="async"
+              class="h-full w-full object-contain p-2"
+            />
+          </span>
+          <span class="min-w-0">
+            <span class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <span class="font-display text-lg font-medium tracking-tight text-white group-hover:text-[#ddd6fe] sm:text-xl">
+                {project.name}
+              </span>
+              <span class="text-sm text-[#c5cad6]">{project.date}</span>
+            </span>
+            <span class="mt-2 block text-[15px] leading-relaxed text-[#e4e6ee] sm:text-base">
+              {isEs ? project.description.es : project.description.en}
+            </span>
+            <span class="mt-2 block text-sm leading-relaxed text-[#c5cad6]">
+              {project.tags.join(", ")}
+            </span>
+          </span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
