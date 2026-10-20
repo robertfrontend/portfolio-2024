@@ -44,6 +44,22 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    name: "ATC Easy Radar",
+    description: {
+      en: "Air traffic control game with live radar, six airports, and heading, altitude, and speed commands.",
+      es: "Juego de control aéreo con radar en tiempo real, seis aeropuertos y comandos de rumbo, altitud y velocidad.",
+    },
+    date: "2026",
+    img: "/work/atc-easy-radar.webp",
+    alt: {
+      en: "ATC Easy Radar gameplay at London Heathrow with aircraft tracks and flight controls",
+      es: "Partida de ATC Easy Radar en Londres Heathrow con tráfico aéreo y controles de vuelo",
+    },
+    link: "https://atc-easy-radar.vercel.app/",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Game Development"],
+    featured: true,
+  },
+  {
     name: "Menu DR",
     description: {
       en: "Digital menus for restaurants, with a live catalog and contactless ordering.",
