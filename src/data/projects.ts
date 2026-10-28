@@ -50,7 +50,7 @@ export const projects: Project[] = [
       es: "Juego de control aéreo con radar en tiempo real, seis aeropuertos y comandos de rumbo, altitud y velocidad.",
     },
     date: "2026",
-    img: "/work/atc-easy-radar.webp",
+    img: "/work/atc-easy-radar-home.webp",
     alt: {
       en: "ATC Easy Radar gameplay at London Heathrow with aircraft tracks and flight controls",
       es: "Partida de ATC Easy Radar en Londres Heathrow con tráfico aéreo y controles de vuelo",
