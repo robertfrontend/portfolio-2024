@@ -49,7 +49,7 @@ const isEs = lang === "es";
       <ProjectList lang={lang} featuredOnly={true} />
       <p class="mt-8">
         <a
-          href="/projects"
+          href={isEs ? "/es/projects" : "/projects"}
           class="text-base text-[#ddd6fe] underline decoration-white/25 underline-offset-4 hover:decoration-[#ddd6fe]"
         >
           {isEs ? "Todos los proyectos" : "All projects"}

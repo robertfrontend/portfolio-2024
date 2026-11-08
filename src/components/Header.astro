@@ -16,7 +16,7 @@ if (pathname.includes("/product-studio")) {
   esUrl = "/product-studio/es";
 } else if (pathname.includes("/projects")) {
   enUrl = "/projects";
-  esUrl = "/es#work";
+  esUrl = "/es/projects";
 }
 
 const onSpanishHome = pathname === "/es" || pathname === "/es/";
@@ -25,7 +25,13 @@ const onProjects = pathname === "/projects" || pathname.startsWith("/projects/")
 
 const homeHref = isEs ? "/es" : "/";
 const onStudioPage = pathname.includes("/product-studio");
-const workHref = isEs ? (onSpanishHome ? "#work" : "/es#work") : onEnglishHome ? "#work" : "/projects";
+const workHref = isEs
+  ? onSpanishHome
+    ? "#work"
+    : "/es/projects"
+  : onEnglishHome
+    ? "#work"
+    : "/projects";
 const studioHref =
   onSpanishHome || onEnglishHome ? "#studio" : isEs ? "/es#studio" : "/#studio";
 const contactHref =
